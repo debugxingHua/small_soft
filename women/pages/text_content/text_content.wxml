@@ -1,2 +1,11 @@
-<!--pages/text_content/text_content.wxml-->
-<text>pages/text_content/text_content.wxml</text>
+<view class='text-container'>
+  <view class='text-title'>
+    <text>{{title}}</text>
+  </view>
+  <view  class='text-other'>
+    <text style='color:red'>此处是留给广告的</text>
+  </view>
+  <view class='text-content'>
+    <text>{{content}}</text>
+  </view>
+</view>

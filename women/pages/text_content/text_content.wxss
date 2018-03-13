@@ -1,1 +1,23 @@
-/* pages/text_content/text_content.wxss */
+page {
+  background-color: #ffffcc;
+}
+.text-container {
+  width: 90%;
+  margin: auto 5%;
+  vertical-align: middle;
+}
+.text-title {
+  font-family: Microsoft YaHei;
+  font-size: 36rpx;
+  margin-top: 45rpx; 
+}
+.text-other {
+  text-align: center;
+  margin: 10px auto; 
+}
+.text-content {
+  text-indent: 2em;
+  font-family: SimSun;
+  font-size: 28rpx;
+  letter-spacing: 2px;
+}

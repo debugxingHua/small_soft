@@ -1,43 +1,35 @@
-.posts-container {
-  /* display: flex; */
-  /* flex-direction: column; */
+.list-container {
   background-color:#fff;
-  /* margin-top: 20rpx;
-  margin-bottom: 40rpx; 
-  border-bottom:1px solid #ededed;
-  border-top: 1px solid #ededed;
-  padding-bottom:5px;    */
-}
-.posts-img {
-  /* margin-left: 10rpx; */
-  width: 100rpx;
-  height: 100rpx;
-  /* margin:  auto 0; */
-}
-.posts-ic {
-  width: 20%;
-  text-align: center;
-}
-.posts-tc {
-  width: 80%;
-  /* height: 60rpx; */
-  /* float: left; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 115rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  border-bottom: 1px solid #333;
+  border-bottom-color: #cccccc;
 }
 
-.posts-title {
-  font-size: 34rpx;
+.list-title {
+  font-family: 	Microsoft YaHei;
+  font-size: 35rpx;
   color: #333;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
 }
 
-.posts-content {
-  color: #666;
+.list-content {
+  font-family: SimSun;
   font-size: 25rpx;
-   /* letter-spacing: 2rpx;  */
-   line-height: 40rpx; 
-  /*超出一行文字自动隐藏  */
-  overflow:hidden;
-  /* 文字隐藏后添加省略号 */
-  text-overflow:ellipsis;
-  /* 强制不换行 */
-  white-space:nowrap;
+  color: #cccccc;
+  width: 95%;
+  margin-top: 3rpx;
+  text-indent: 2em;  
+  overflow: hidden;
+  display:-webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical; 
 }
