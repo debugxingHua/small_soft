@@ -1,0 +1,33 @@
+<import src="pbl-template/template.wxml" />
+<!-- 滑动视图 -->
+<swiper indicator-dots='true' autoplay='true' interval='5000'>
+  <swiper-item wx:for="{{swiper_datas}}" wx:for-item="item" wx:key="">
+    <image src='{{item.img_src}}'></image>
+  </swiper-item>
+</swiper>
+<!-- 按钮 -->
+<view class="btn_block">
+  <text id="tj" bindtap='tj' style='color:{{color_tj}}'>推荐商品</text>
+  <text bindtap='zx' style='color:{{color_zx}}'>最新商品</text>
+  <text bindtap='zr' style='color:{{color_zr}}'>最热商品</text>
+</view>
+<!-- 瀑布流 -->
+<view class="pbl1">
+  <block wx:for="{{pbl_datas}}" wx:key="" wx:for-item="item" wx:for-index="idx">
+    <view class="content_pbl">
+      <template is="pbl1" data="{{item}}" />
+    </view>
+  </block>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+

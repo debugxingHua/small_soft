@@ -1,0 +1,11 @@
+<!--  下面是一个模块 -->
+<template name="pbl1">
+  <view class="pbl1_one">
+    <image class="pbl1_img" src="{{item.img_url}}"></image>
+    <text class="pbl1_title">{{item.title}}</text>
+    <view class='pbl1_money'>
+      <text class='pbl1_money_now'>{{item.money_now}}</text>
+      <text class='pbl1_money_old'>{{item.money_old}}</text>
+    </view>
+  </view>
+</template>

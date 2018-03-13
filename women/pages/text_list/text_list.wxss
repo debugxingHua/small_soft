@@ -1,0 +1,43 @@
+.posts-container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  background-color:#fff;
+  /* margin-top: 20rpx;
+  margin-bottom: 40rpx; 
+  border-bottom:1px solid #ededed;
+  border-top: 1px solid #ededed;
+  padding-bottom:5px;    */
+}
+.posts-img {
+  /* margin-left: 10rpx; */
+  width: 100rpx;
+  height: 100rpx;
+  /* margin:  auto 0; */
+}
+.posts-ic {
+  width: 20%;
+  text-align: center;
+}
+.posts-tc {
+  width: 80%;
+  /* height: 60rpx; */
+  /* float: left; */
+}
+
+.posts-title {
+  font-size: 34rpx;
+  color: #333;
+}
+
+.posts-content {
+  color: #666;
+  font-size: 25rpx;
+   /* letter-spacing: 2rpx;  */
+   line-height: 40rpx; 
+  /*超出一行文字自动隐藏  */
+  overflow:hidden;
+  /* 文字隐藏后添加省略号 */
+  text-overflow:ellipsis;
+  /* 强制不换行 */
+  white-space:nowrap;
+}

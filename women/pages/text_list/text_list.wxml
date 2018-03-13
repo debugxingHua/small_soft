@@ -1,0 +1,14 @@
+<!-- 文章列 -->
+<view class='post-container' wx:for="{{text_list}}" wx:key="" wx:for-item="item" wx:for-index="idx">
+  <!-- 图片 -->
+  <view class='posts-ic'>
+    <image class='posts-img' src='{{item.img_src}}'></image>
+  </view>
+  <view class='posts-tc'>
+    <!-- 标题 -->
+    <text class='posts-title'>{{item.title}}</text>
+    <!-- 内容 -->
+    <text class='posts-content'>{{item.content}}</text>
+  </view>
+  
+</view>

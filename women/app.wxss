@@ -1,0 +1,14 @@
+/**app.wxss**/
+page {
+  width: 100%;
+}
+
+swiper {
+  width: 100%;
+  height: 500rpx;
+}
+
+swiper-item image{
+  width: 100%;
+  height: 500rpx;
+}

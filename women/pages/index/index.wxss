@@ -1,0 +1,17 @@
+/**index.wxss**/
+@import "pbl-template/template.wxss";
+
+.pbl1 {
+  width: 100%;
+}
+.btn_block {
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+.btn_block text{
+  width: 33%;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 18px;
+}
