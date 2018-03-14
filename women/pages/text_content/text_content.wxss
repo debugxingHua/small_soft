@@ -16,6 +16,7 @@ page {
   margin: 10px auto; 
 }
 .text-content {
+  margin-bottom: 30px;
   text-indent: 2em;
   font-family: SimSun;
   font-size: 28rpx;

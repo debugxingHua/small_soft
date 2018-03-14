@@ -1,7 +1,7 @@
 <!-- 文章列 -->
 <block class="list" wx:for="{{text_list}}" wx:key="" wx:for-item="item" wx:for-index="idx">
-  <view class='list-container' bindtap='toContent' data-id='{{item.id}}'>
+  <view class='list-container' bindtap='toContent' data-id='{{item.articles_id}}' data-title='{{item.title}}'>
     <text class='list-title'>{{item.title}}</text>
-    <text class='list-content'>{{item.content}}</text>
+    <!-- <text class='list-content'>{{item.content}}</text> -->
   </view>
 </block>

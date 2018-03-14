@@ -8,4 +8,7 @@
   <view class='text-content'>
     <text>{{content}}</text>
   </view>
+  <view style='text-align: center;'>
+    <text>End</text>
+  </view>
 </view>
