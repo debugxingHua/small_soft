@@ -1,9 +1,10 @@
 {
   "pages":[
+    "pages/shopcar/shopcar",
     "pages/index/index",
     "pages/shop_content/shop_content",
     "pages/text_list/text_list",
-    "pages/shopcar/shopcar",
+    
     "pages/my/my",
     "pages/text_content/text_content"
     

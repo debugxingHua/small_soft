@@ -5,6 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
+    shop_name:"女王的新装",
+    img_src:'/images/swiper/m1.jpg',
+    size: "50cm",
+    title:"我就是标题",
+    color:"红色",
+    money:"￥99",
+    count:"1",
+    money_all :"99",
   
   },
 

@@ -1,2 +1,46 @@
-<!--pages/shopcar/shopcar.wxml-->
-<text>pages/shopcar/shopcar.wxml</text>
+<view class='container'>
+  <view class='shop_name'>{{shop_name}}</view>
+  <view class='shop_content'>
+    <!-- 商品图 -->
+    <view class='img_container'>
+      <image  class='img' src='{{img_src}}'></image>
+    </view>
+    <!-- 商品内容 -->
+    <view class='content_container'>
+      <!-- 标题及删除 -->
+      <view class='td'>
+        <text class='title'>{{title}}</text>
+        <text class='delete'>删除</text>
+      </view>
+      <!-- 尺寸及颜色 -->
+      <view class='sc'>
+        <text class='sc_text'>尺寸：{{size}} 颜色：{{color}}</text>
+      </view>
+      <!-- 价格及数量 -->
+      <view class='mc'>
+        <view class='money'>
+          <text>{{money}}</text>
+        </view>
+        <view class='count'>
+          <text class='jian'>-</text>
+          <view class='count_value'>
+            <input value='{{count}}' />
+          </view>
+          <text class='jia'>+</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='qx'>
+      <text>全选</text>
+    </view>
+    <view class='hj'>
+      <text>合计：{{money_all}}</text>
+    </view>
+    <view class='js'>
+      <text class='js_text'>结算</text>
+    </view>
+    
+  </view>
+</view>
