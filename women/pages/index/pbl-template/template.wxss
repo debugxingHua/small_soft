@@ -27,4 +27,5 @@
 .pbl1_money_old {
   float: right;
   font-size: 12px; 
+  text-decoration:line-through;
 }

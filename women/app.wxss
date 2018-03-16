@@ -12,3 +12,8 @@ swiper-item image{
   width: 100%;
   height: 500rpx;
 }
+
+view {
+  font-family: 'Microsoft YaHei';
+  font-size: 14px;
+}

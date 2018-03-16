@@ -40,4 +40,10 @@ Page({
       pbl_datas: pbl.pbl_datas3
     });
   },
+  toContent:function(event){
+    var id = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../shop_content/shop_content?id='+id
+    })
+  }
 })

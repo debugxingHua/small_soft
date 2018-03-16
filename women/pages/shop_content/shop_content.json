@@ -1,20 +1,4 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/shop_content/shop_content",
-    "pages/text_list/text_list",
-    "pages/shopcar/shopcar",
-    "pages/my/my",
-    "pages/text_content/text_content"
-    
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "女人",
-    "navigationBarTextStyle":"black"
-  },
-  "tabBar": {
     "color": "#000033",
     "selectedColor": "#33ff00",
     "borderStyle": "black",
@@ -24,11 +8,12 @@
         "iconPath": "images/icon/shouye1.png",
         "pagePath": "pages/index/index",
         "text": "首页"
-      },{
+      },
+      {
         "selectedIconPath": "images/icon/content.png",
-        "iconPath":"images/icon/content1.png",
-        "pagePath":"pages/text_list/text_list",
-        "text":"文章"
+        "iconPath": "images/icon/content1.png",
+        "pagePath": "pages/text_list/text_list",
+        "text": "文章"
       },
       {
         "selectedIconPath": "images/icon/gouwuche.png",
@@ -43,5 +28,4 @@
         "text": "我的"
       }
     ]
-  }
 }

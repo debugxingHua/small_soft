@@ -1,0 +1,66 @@
+Page {
+  background-color: #ccc; 
+}
+.container {
+  background-color: #fff;
+}
+/* 标题 */
+.title{
+  font-size: 18px;
+  width: 97%;
+  height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 销量及❤ */
+.sales{
+  color: #333;
+  padding-bottom: 6px;  
+  border-bottom: 1px solid #999;
+}
+/* ❤ */
+.like {
+  float: right;
+  padding-right: 10px;
+}
+/* 价格 */
+.money{
+  color:red;
+}
+/* 删除的价格 */
+.money_old{
+  color: #666;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
+/* 快递 */
+.expressage{
+  color: #666;
+  float: right;
+  padding-right: 5px; 
+}
+
+/* 内填充划线 */
+.money, .specification, .guarantee, .shipments {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #999;
+}
+
+.buttons {
+  background-color: #fff;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  width: 100%;
+}
+.btn1,.btn2 {
+  text-align: center;
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+}

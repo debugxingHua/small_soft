@@ -15,7 +15,9 @@
 <view class="pbl1">
   <block wx:for="{{pbl_datas}}" wx:key="" wx:for-item="item" wx:for-index="idx">
     <view class="content_pbl">
-      <template is="pbl1" data="{{item}}" />
+      <view class="pbl1_one" bindtap='toContent' data-id='{{item.id}}'>
+        <template is="pbl1" data="{{item}}" />
+      </view>
     </view>
   </block>
 </view>
