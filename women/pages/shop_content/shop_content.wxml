@@ -1,30 +1,30 @@
 <!-- 商品滑动图 -->
 <swiper indicator-dots='true' autoplay='true' interval='5000'>
   <swiper-item wx:for="{{swiper_img}}" wx:for-item="item" wx:key="">
-    <image src='{{item.img_src}}'></image>
+    <image src='{{item.img_url}}'></image>
   </swiper-item>
 </swiper>
 <view class='container'>
   <view class='title'>
     <!-- 标题 -->
-    <text>{{title}}</text>
+    <text>{{commodity_data.title}}</text>
   </view>
   <view class='sales'>
     <!-- 销量 -->
-    <text>销量: {{sales}}</text>
+    <text>销量: {{commodity_data.sales}}</text>
     <text class='like'>☆</text>
   </view>
   <view class='money'>
     <!-- 价格 -->
-    <text class='money_now'>{{money_now}}</text>
-    <text class='money_old'>{{money_old}}</text>
+    <text class='money_now'>￥{{commodity_data.money_now}}</text>
+    <text class='money_old'>￥{{commodity_data.money_old}}</text>
     <!-- 快递 -->
-    <text class='expressage'>免运费</text>
+    <text class='expressage'>{{commodity_data.expressage}}</text>
   </view>
   <view class='specification'>
     <!-- 规格尺码 -->
     <text>规格：</text>
-    <text style='color:#666;'>颜色、尺码</text>
+    <text style='color:#666;'>颜色:{{commodity_data.color}}、尺码:{{commodity_data.size}}</text>
     <text style='float:right;margin-right:2px;'>></text>
   </view>
   <view class='guarantee'>
@@ -44,7 +44,7 @@
 </view>
 <!-- 商品详情图片组 -->
 <view wx:for="{{swiper_img}}" wx:key="" wx:for-item="item" wx:for-index="idx">
-  <image class='img' src="{{item.img_src}}"></image>
+  <image class='img' src="{{item.img_url}}"></image>
 </view>
 <!-- 为你推荐。。 -->
 <view id='tj'></view>

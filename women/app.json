@@ -1,12 +1,22 @@
 {
   "pages":[
-    "pages/shopcar/shopcar",
     "pages/index/index",
     "pages/shop_content/shop_content",
-    "pages/text_list/text_list",
     
-    "pages/my/my",
-    "pages/text_content/text_content"
+    "pages/text_list/text_list",
+    "pages/text_content/text_content",
+
+    "pages/shopcar/shopcar",
+    "pages/payment/payment",
+
+    "pages/my/my",    
+    "pages/all_indent/all_indent",
+    "pages/no_pay/no_pay",
+    "pages/no_indent/no_indent",
+    "pages/red_bage/red_bage",
+    "pages/favorite/favorite",
+    "pages/address/address",
+    "pages/service/service"
     
   ],
   "window":{

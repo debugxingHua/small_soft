@@ -7,60 +7,39 @@ Page({
   data: {
   
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+  to_all_indent:function(event){
+    wx.navigateTo({
+      url: '../all_indent/all_indent'
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  to_no_pay: function (event) {
+    wx.navigateTo({
+      url: '../no_pay/no_pay'
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+  to_no_indent: function (event) {
+    wx.navigateTo({
+      url: '../no_indent/no_indent'
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
+  to_address: function (event) {
+    wx.navigateTo({
+      url: '../address/address'
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
+  to_service: function (event) {
+    wx.navigateTo({
+      url: '../service/service'
+    })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
+  to_favorite: function (event) {
+    wx.navigateTo({
+      url: '../favorite/favorite'
+    })
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  to_red_bage: function (event) {
+    wx.navigateTo({
+      url: '../red_bage/red_bage'
+    })
   }
 })

@@ -1,2 +1,30 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class='container'>
+  <view class='user_info'>
+    <view>用户信息</view>
+  </view>
+  <view class='indent'>
+    <view class='my_indent'>我的订单</view>
+    <view class='indent_btn'>
+      <text class='all_indent' bindtap='to_all_indent'>全部订单</text>
+      <text class='no_pay' bindtap='to_no_pay'>待付款</text>
+      <text class='no_indent' bindtap='to_no_indent'>待收货</text>
+    </view>
+  </view>
+  
+  <view class='address' bindtap='to_address'>
+    <text>地址</text>
+    <text class='lg'>></text>
+  </view>
+  <view class='service' bindtap='to_service'>
+    <text>客服</text>
+    <text class='lg'>></text>
+  </view>
+  <view class='favorite' bindtap='to_favorite'>
+    <text>收藏夹</text>
+    <text class='lg'>></text>
+  </view>
+  <view class='red_bage' bindtap='to_red_bage'>
+    <text>红包</text>
+    <text class='lg'>></text>
+  </view>
+</view>

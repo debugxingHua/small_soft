@@ -2,7 +2,7 @@
 <!-- 滑动视图 -->
 <swiper indicator-dots='true' autoplay='true' interval='5000'>
   <swiper-item wx:for="{{swiper_datas}}" wx:for-item="item" wx:key="">
-    <image src='{{item.img_src}}'></image>
+    <image src='{{item.img_url}}'></image>
   </swiper-item>
 </swiper>
 <!-- 按钮 -->
@@ -15,7 +15,7 @@
 <view class="pbl1">
   <block wx:for="{{pbl_datas}}" wx:key="" wx:for-item="item" wx:for-index="idx">
     <view class="content_pbl">
-      <view class="pbl1_one" bindtap='toContent' data-id='{{item.id}}'>
+      <view class="pbl1_one" bindtap='toContent' data-id='{{item.commodity_id}}'>
         <template is="pbl1" data="{{item}}" />
       </view>
     </view>

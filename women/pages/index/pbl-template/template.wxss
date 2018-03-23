@@ -8,10 +8,13 @@
   width: 100%;
   height: 360rpx;
 }
-.pbl1_title {
-  width: 50;
+.pbl1_title_view {
+  width: 100%;
   height: 46rpx;
   font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
 }
 
 .pbl1_money {

@@ -1,32 +1,43 @@
-Page {
-  background-color: #ccc;
-}
+
 .container {
   background-color: #fff;
-  margin-top: 10px;
+  padding: 0 10rpx;
 }
 
 .shop_name {
   margin-left: 10rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
 }
 
 /* 商品信息 */
 .shop_content {
   width: 100%;
-  height: 120px;
-  border: 1px solid #f33;
+  height: 80px;
+  padding-top:10px; 
+  /* border: 1px solid #f33; */
+  margin-bottom: 10px;
 }
 /* 图片 */
 .img_container {
-  width: 30%;
+  width: 25%;
+  text-align: center;
   float: left;
+  position: relative;
+}
+.checkbox {
+  position:absolute;
+  top:0px;
+  left:10rpx;
 }
 .img {
-  width: 120px;
-  height: 120px;
+  width: 90%;
+  height: 80px;
+  /* border: 1px solid #f33; */
 }
 .content_container {
-  width: 70%;
+  width: 75%;
+  height: 80px;
   float: left;
 }
 /* 标题和删除按钮 */
@@ -43,17 +54,19 @@ Page {
 }
 /* 尺寸、颜色 */
 .sc {
-  padding-top: 20px;
+  color: #666;
+  font-size: 12px;
   padding-left: 10rpx;
 }
 /* 价格、数量 */
 .mc {
   width: 100%;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-left: 10rpx;
 }
 .money {
   width: 30%;
+  color: #f33;
   float: left;
 }
 .count {
@@ -62,11 +75,11 @@ Page {
   text-align: center;
 }
 .jian, .jia {
-  width:30%;
+  width:40%;
   float:left;
 }
 .count_value {
-  width: 40%;
+  width: 20%;
   float: left;
 }
 
@@ -74,30 +87,31 @@ Page {
 /* 底部全选组 */
 .footer {
   background-color: #fff;
-  padding-top: 12px;
-  padding-bottom: 12px;
   border-top: 1px solid #ccc;
   width: 100%;
   position:fixed;
   bottom: 0;
   text-align: center;
 }
-.qx {
-  width: 20%;
+.qx,.hj{
+  font-size: 16px;
   float: left;
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+}
+.qx {
+  width: 30%;
 }
 .hj {
-  width: 50%;
-  float: left;
+  width: 40%;
 }
 .js {
-  width: 30%;
   float: left;
+  width: 30%;
+   padding-top: 7px; 
 }
-.js_text {
+.js_btn {
+  width: 70%;
   background-color: #f33;
-}
-.count_img {
-  width: 20px;
-  height: 20px;
+  line-height :30px;
 }

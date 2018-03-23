@@ -5,66 +5,45 @@ Page({
    * 页面的初始数据
    */
   data: {
-    shop_name:"女王的新装",
-    img_src:'/images/swiper/m1.jpg',
-    size: "50cm",
-    title:"我就是标题",
-    color:"红色",
-    money:"￥99",
-    count:"1",
-    money_all :"99",
-  
+    shop_name: "女王的1",
+    money_all:100,
+    data :  [
+      {
+        img_src: '/images/swiper/m1.jpg',
+        size: "50cm",
+        title: "我就是标题",
+        color: "红色",
+        money: "￥99",
+        count: "1",
+        checkbox : true
+      },
+      {
+        img_src: '/images/swiper/m2.jpg',
+        size: "50cm",
+        title: "我就是标题",
+        color: "红色",
+        money: "￥199",
+        count: "2",
+        checkbox : true
+      }
+  ]
+  },
+  to_pay: function(event){
+    console.log(event);
+    wx.navigateTo({
+      url: '../payment/payment'
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
-  },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+  checkbox_all: function(event){
+    console.log(event);
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
   /**
    * 用户点击右上角分享
    */
