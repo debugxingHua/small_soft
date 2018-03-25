@@ -63,5 +63,26 @@ Page({
     wx.navigateTo({
       url: '../shop_content/shop_content?id='+id
     })
+  },
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function (res) {
+    return {
+      title: '自定义，一般写小程序的名字',
+      path: '这里写你这个页面的路径',
+      imageUrl:'这个是显示的图片，不写就默认当前页面的截图',
+      success: function (shareTickets) {
+        console.info(shareTickets + '成功');
+        // 转发成功
+      },
+      fail: function (res) {
+        console.log(res + '失败');
+        // 转发失败
+      },
+      complete:function(res){
+        // 不管成功失败都会执行
+      }
+    }
   }
 })

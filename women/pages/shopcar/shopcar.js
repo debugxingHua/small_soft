@@ -1,4 +1,4 @@
-// pages/shopcar/shopcar.js
+var app = getApp();
 Page({
 
   /**
@@ -39,10 +39,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
   checkbox_all: function(event){
     console.log(event);
+  },
+  onShow: function (options) {
+    this.setData({
+      shop_cart_array: app.globalData.shop_cart_array
+    });
+    // console.log(app.globalData.shop_cart_array);
   },
   /**
    * 用户点击右上角分享

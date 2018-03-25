@@ -1,0 +1,16 @@
+<template name='tabar'>
+  <view class='tabar_bottom'>
+    <view class='sy' bindtap='tosy'>
+      <text>首页</text>
+    </view>
+    <view class='cart' bindtap='tocart'>
+      <text>购物车</text>
+    </view>
+    <view class='addCart'  bindtap='addcart'>
+      <text>加入购物车</text>
+    </view>
+    <view class='buy'>
+      <text>立即购买</text>
+    </view>
+  </view>
+</template>

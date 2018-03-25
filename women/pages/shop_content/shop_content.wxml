@@ -1,3 +1,5 @@
+<import src="../template/tabar/template.wxml" />
+
 <!-- 商品滑动图 -->
 <swiper indicator-dots='true' autoplay='true' interval='5000'>
   <swiper-item wx:for="{{swiper_img}}" wx:for-item="item" wx:key="">
@@ -47,4 +49,10 @@
   <image class='img' src="{{item.img_url}}"></image>
 </view>
 <!-- 为你推荐。。 -->
-<view id='tj'></view>
+  <view class='tj' id='tj'>
+    <text>End</text>
+  </view> 
+<!-- 自定义下部导航 -->
+<view class='footer'>
+  <template is="tabar" />
+</view>

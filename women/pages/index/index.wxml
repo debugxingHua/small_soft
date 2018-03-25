@@ -1,4 +1,4 @@
-<import src="pbl-template/template.wxml" />
+<import src="../template/pbl/template.wxml" />
 <!-- 滑动视图 -->
 <swiper indicator-dots='true' autoplay='true' interval='5000'>
   <swiper-item wx:for="{{swiper_datas}}" wx:for-item="item" wx:key="">

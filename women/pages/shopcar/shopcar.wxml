@@ -1,11 +1,11 @@
 <view style='background-color:#ccc;height:10px;'></view>
 <view class='shop_name'>{{shop_name}}</view>
-<view class='container' wx:for="{{data}}" wx:key="" wx:for-item="item">
+<view class='container' wx:for="{{shop_cart_array}}" wx:key="" wx:for-item="item">
   <view class='shop_content'>
     <!-- 商品图 -->
     <view class='img_container'>
       <checkbox class='checkbox' value="{{checkbox}}" checked></checkbox>
-      <image  class='img' src='{{item.img_src}}'></image>
+      <image  class='img' src='{{item.img_url}}'></image>
     </view>
     <!-- 商品内容 -->
     <view class='content_container'>

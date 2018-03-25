@@ -1,5 +1,5 @@
 /**index.wxss**/
-@import "pbl-template/template.wxss";
+@import "../template/pbl/template.wxss";
 
 .pbl1 {
   width: 100%;

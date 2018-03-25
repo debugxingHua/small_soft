@@ -1,5 +1,5 @@
+var app = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -21,7 +21,8 @@ Page({
       },
       method: 'GET',
       success:function(result){
-        // console.info(result);
+        // console.info(result.data);
+        app.globalData.commodity=result.data;
         that.setData({
           commodity_data: result.data
         });
@@ -43,11 +44,39 @@ Page({
       }
     });
   },
-
+  tosy : function(option){
+    wx.switchTab({
+      url: '../index/index',
+    })
+  },
+  tocart: function(option){
+    wx.switchTab({
+      url: '../shopcar/shopcar',
+    })
+  },
+  addcart:function(option){
+    // console.log(app.globalData.shop_cart_array);
+    //加入购物车
+    app.globalData.shop_cart_array.push(app.globalData.commodity);
+  },
+  bug: function (option){
+    console.log(option);
+  },
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function (res) {
+    return {
+      title: '女人的衣柜',
+      path: '/pages/shop_content/shop_content?commodity_id=' + app.globalData.commodity.commodity_id,
+      success: function (shareTickets) {
+        console.info(shareTickets+'成功');
+        // 转发成功
+      },
+      fail: function (res) {
+        console.log(res+'失败');
+        // 转发失败
+      }
+    }
   }
 })

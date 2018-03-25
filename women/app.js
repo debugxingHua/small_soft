@@ -3,6 +3,8 @@ App({
   onLaunch: function () {},
   globalData: {
     userinfo : '',
-    pbl_datas : ''
+    pbl_datas : '',
+    shop_cart_array : Array(),
+    commodity : ''
   }
 })
