@@ -1,5 +1,3 @@
-<import src="../template/tabar/template.wxml" />
-
 <!-- 商品滑动图 -->
 <swiper indicator-dots='true' autoplay='true' interval='5000'>
   <swiper-item wx:for="{{swiper_img}}" wx:for-item="item" wx:key="">
@@ -54,5 +52,18 @@
   </view> 
 <!-- 自定义下部导航 -->
 <view class='footer'>
-  <template is="tabar" />
+  <view class='tabar_bottom'>
+    <view class='sy' bindtap='tosy'>
+      <text>首页</text>
+    </view>
+    <view class='cart' bindtap='tocart'>
+      <text>购物车</text>
+    </view>
+    <view class='addCart'  bindtap='addcart' data-id='{{commodity_data.commodity_id}}'>
+      <text>加入购物车</text>
+    </view>
+    <view class='buy'>
+      <text>立即购买</text>
+    </view>
+  </view>
 </view>
