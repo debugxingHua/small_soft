@@ -1,48 +1,55 @@
-<view style='background-color:#ccc;height:10px;'></view>
-<view class='shop_name'>{{shop_name}}</view>
-<view class='container' wx:for="{{shop_cart_array}}" wx:key="" wx:for-item="item">
-  <view class='shop_content'>
-    <!-- 商品图 -->
-    <view class='img_container'>
-      <checkbox class='checkbox' value="{{checkbox}}" checked></checkbox>
-      <image  class='img' src='{{item.img_url}}'></image>
-    </view>
-    <!-- 商品内容 -->
-    <view class='content_container'>
-      <!-- 标题及删除 -->
-      <view class='td'>
-        <text class='title'>{{item.title}}</text>
-        <text class='delete'>删除</text>
+<block wx:if="{{shop_cart_length == 0}}">
+  <view style='width:100%;margin-top:180px;text-align:center;'>
+    <button style='width:50%;' bindtap='toSY'>去首页看看</button>
+  </view>
+</block>
+<block wx:else>
+  <view style='background-color:#ccc;height:10px;'></view>
+  <view class='shop_name'>{{shop_name}}</view>
+  <view class='container' wx:for="{{shop_cart_array}}" wx:key="" wx:for-item="item">
+    <view class='shop_content' catchtap='toContent' data-id='{{item.commodity_id}}'>
+      <!-- 商品图 -->
+      <view class='img_container'>
+        <checkbox class='checkbox' value="{{checkbox}}" checked></checkbox>
+        <image  class='img' src='{{item.img_url}}'></image>
       </view>
-      <!-- 尺寸及颜色 -->
-      <view class='sc'>
-        <text class='sc_text'>尺寸：{{item.size}} 颜色：{{item.color}}</text>
-      </view>
-      <!-- 价格及数量 -->
-      <view class='mc'>
-        <view class='money'>
-          <text>{{item.money}}</text>
+      <!-- 商品内容 -->
+      <view class='content_container'>
+        <!-- 标题及删除 -->
+        <view class='td'>
+          <text class='title'>{{item.title}}</text>
+          <text class='delete' catchtap='delete_commodity' data-id='{{item.sc_id}}'>删除</text>
         </view>
-        <view class='count'>
-          <text class='jian'>-</text>
-          <view class='count_value'>
-            <input type='number' style='background-color:#999;' value='{{item.count}}' />
+        <!-- 尺寸及颜色 -->
+        <view class='sc'>
+          <text class='sc_text'>尺寸：{{item.size}} 颜色：{{item.color}}</text>
+        </view>
+        <!-- 价格及数量 -->
+        <view class='mc'>
+          <view class='money'>
+            <text>￥{{item.money_now}}</text>
           </view>
-          <text class='jia'>+</text>
+          <view class='count'>
+            <button size='mini' class='jian' catchtap='jian' data-count='{{item.count}}' data-id='{{item.sc_id}}'>-</button>
+            <view class='count_value' catchtap='inputCount_stop'>
+              <input type='number' style='background-color:#999;' value='{{item.count}}' data-id='{{item.sc_id}}'  bindconfirm='inputCount'/>
+            </view>
+            <button size='mini' class='jia' catchtap='jia' data-count='{{item.count}}' data-id='{{item.sc_id}}'>+</button>
+          </view>
         </view>
       </view>
     </view>
+    <view class='footer'>
+      <view class='qx'>
+        <checkbox class='checkbox_all' value='{{checkbox_all}}'  checked></checkbox>
+        <text>全选</text>
+      </view>
+      <view class='hj'>
+        <text>合计: {{money_all}} 元</text>
+      </view>
+      <view class='js'>
+        <button class='js_btn' bindtap='to_pay'>结算</button>
+      </view>
+    </view>
   </view>
-  <view class='footer'>
-    <view class='qx'>
-      <checkbox class='checkbox_all' value='{{checkbox_all}}'  checked></checkbox>
-      <text>全选</text>
-    </view>
-    <view class='hj'>
-      <text>合计: {{money_all}} 元</text>
-    </view>
-    <view class='js'>
-      <button class='js_btn' bindtap='to_pay'>结算</button>
-    </view>
-  </view>
-</view>
+</block>

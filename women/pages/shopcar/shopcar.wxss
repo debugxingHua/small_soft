@@ -75,12 +75,19 @@
   text-align: center;
 }
 .jian, .jia {
-  width:40%;
+  width:30%;
   float:left;
 }
 .count_value {
-  width: 20%;
+  width: 30%;
   float: left;
+}
+.count_value input{
+  line-height: 2.3em
+}
+
+.delete {
+  color: #ccc;
 }
 
 

@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
   /**
    * 页面的初始数据
@@ -16,37 +17,10 @@ Page({
   },
   addcart:function(event){
     var commodity_id = event.currentTarget.dataset.id;
-    wx.request({
-      url: 'http://weixin.com/admin/addShopCart.php',
-      header: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      method: 'POST',
-      data: {
-        commodity_id: commodity_id,
-        color:'duot2',
-        size:18,
-        count:1
-      },
-      success:function(res){
-        // console.log(res.data);
-        if(res.data != null){
-          wx.showToast({
-            title: '加入成功',
-            icon: 'succes',
-            duration: 1000,
-            mask:true
-          })
-        }else{
-          wx.showToast({
-            title: '失败',
-            icon: 'error',
-            duration: 1000,
-            mask: true
-          })
-        }
-      }
-    })
+    var color = 'red22';
+    var size = '11';
+    var count = 1;
+    app.addCart(commodity_id,color, size, count);
   },
   bug: function (event){
     console.log(event);
