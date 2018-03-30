@@ -1,12 +1,14 @@
 {
   "pages":[
+    "pages/shopcar/shopcar",
+    
+
     "pages/index/index",
     "pages/shop_content/shop_content",
     
     "pages/text_list/text_list",
     "pages/text_content/text_content",
 
-    "pages/shopcar/shopcar",
     "pages/payment/payment",
 
     "pages/my/my",    

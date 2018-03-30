@@ -83,7 +83,8 @@
   float: left;
 }
 .count_value input{
-  line-height: 2.3em
+  line-height: 2.3em;
+  color: #fff;
 }
 
 .delete {
@@ -99,6 +100,7 @@
   position:fixed;
   bottom: 0;
   text-align: center;
+  z-index:auto;
 }
 .qx,.hj{
   font-size: 16px;

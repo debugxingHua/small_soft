@@ -13,10 +13,30 @@ App({
     wx.request({
       url: 'http://weixin.com/admin/getShopCartSelect.php',
       success: function (res) {
-        // console.info(res.data.length);
+        var data = res.data;
+        var length = data.length;
+        var money_all = 0;
+        var selected_all = true;
+        var sc_id_array_no = Array();
+        var sc_id_array_all = Array();
+        // 遍历集合，计算所有选中的总价
+        for(var i = 0;i<length; i++){
+          if (data[i].selected == 1){
+            money_all += parseInt(data[i].money_now) * parseInt(data[i].count)
+            sc_id_array_all[sc_id_array_all.length] = data[i].sc_id;
+          }else{
+            selected_all = false;
+            sc_id_array_no[sc_id_array_no.length] = data[i].sc_id;
+          }
+        }
+        // 将数据赋值
         that.setData({
           shop_cart_array: res.data,
-          shop_cart_length: res.data.length
+          shop_cart_length: length,
+          money_all: money_all,
+          selected_all: selected_all,
+          sc_id_array_all: sc_id_array_all,
+          sc_id_array_no: sc_id_array_no
         });
       }
     })
@@ -51,13 +71,43 @@ App({
   // 更新购物车的count
   updateCartCount: function (that, id,count){
     wx.request({
-      url: 'http://weixin.com/admin/UpdateShopCartComodityBySCId.php?id=27&count=15',
+      url: 'http://weixin.com/admin/updateShopCartCountBySCId.php',
       data: {
         id: id,
         count: count
       },
       success: function (res) {
-        console.log(res);
+        // console.log(res);
+        // 重新加载购物车，并计算商品价格。
+        getApp().getCart(that);
+      }
+    })
+  },
+  // 更新购物车的selected
+  updateCartSelected: function (that, id, selected) {
+    wx.request({
+      url: 'http://weixin.com/admin/updateShopCartSelectedBySCId.php',
+      data: {
+        id: id,
+        selected: selected
+      },
+      success: function (res) {
+        // console.log(res);
+        // 重新加载购物车，并计算商品价格。
+        getApp().getCart(that);
+      }
+    })
+  },
+  // 更新购物车全选的selected
+  updateCartAllSelected: function (that, sc_id_array, selected) {
+    wx.request({
+      url: 'http://weixin.com/admin/updateShopCartAllSelectedBySCId.php',
+      data: {
+        id: sc_id_array,
+        selected: selected
+      },
+      success: function (res) {
+        // console.log(res.data);
         // 重新加载购物车，并计算商品价格。
         getApp().getCart(that);
       }
