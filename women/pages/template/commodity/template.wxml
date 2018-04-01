@@ -1,0 +1,36 @@
+<template name="commodity">
+  <view class='shop_content'>
+      <!-- 商品图 -->
+      <view class='img_container'  bindtap="bindCheckbox" data-index="{{index}}">
+      <!-- 1选中、2未选中、3失效 -->
+        <icon wx:if="{{item.selected == 1}}" type="success" size="20" class="checkbox"/>
+        <icon wx:elif="{{item.selected == 3}}" type="cancel" size="20" bindtap="bindCheckbox" data-index="{{index}}" class="checkbox"/> 
+        <image  class='img' src='{{item.img_url}}'></image>
+      </view>
+      <!-- 商品内容 -->
+      <view class='content_container' catchtap='toContent' data-id='{{item.commodity_id}}'>
+        <!-- 标题及删除 -->
+        <view class='td'>
+          <text class='title'>{{item.title}}</text>
+          <text class='delete' catchtap='delete_commodity' data-id='{{item.sc_id}}'>删除</text>
+        </view>
+        <!-- 尺寸及颜色 -->
+        <view class='sc'>
+          <text class='sc_text'>尺寸：{{item.size}} 颜色：{{item.color}}</text>
+        </view>
+        <!-- 价格及数量 -->
+        <view class='mc'>
+          <view class='money'>
+            <text>￥{{item.money_now}}</text>
+          </view>
+          <view class='count'>
+            <button size='mini' class='jian' catchtap='jian' data-count='{{item.count}}' data-id='{{item.sc_id}}' data-index="{{index}}">-</button>
+            <view class='count_value' catchtap='inputCount_stop'>
+              <input type='number' style='background-color:#ccc;' value='{{item.count}}' data-id='{{item.sc_id}}' data-index="{{index}}" bindconfirm='inputCount'/>
+            </view>
+            <button size='mini' class='jia' catchtap='jia' data-count='{{item.count}}' data-id='{{item.sc_id}}' data-index="{{index}}">+</button>
+          </view>
+        </view>
+      </view>
+    </view>
+</template>

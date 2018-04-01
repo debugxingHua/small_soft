@@ -71,7 +71,6 @@ Page({
     // 停止向上冒泡
   },
   to_pay: function(event){
-    console.log(event);
     wx.navigateTo({
       url: '../payment/payment'
     })

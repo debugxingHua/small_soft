@@ -1,17 +1,18 @@
 //app.js
+var url = require("/utils/url.js");
 App({
-  onLaunch: function () {},
   globalData: {
     userinfo : '',
     pbl_datas : '',
     commodity : '',
-    shop_cart_count: 0
+    shop_cart_count: 0,
+    pay_commodity_list:Array()
   },
   // 获取购物车数据
   getCart: function (that) {
     // 获取后台shopcart数据
     wx.request({
-      url: 'http://weixin.com/admin/getShopCartSelect.php',
+      url: url.url_list.getCart,
       success: function (res) {
         var data = res.data;
         var length = data.length;
@@ -44,7 +45,7 @@ App({
   // 添加购物车
   addCart: function (commodity_id, color, size, count){
     wx.request({
-      url: 'http://weixin.com/admin/addShopCart.php',
+      url: url.url_list.addShopCart,
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -71,7 +72,7 @@ App({
   // 更新购物车的count
   updateCartCount: function (that, id,count){
     wx.request({
-      url: 'http://weixin.com/admin/updateShopCartCountBySCId.php',
+      url: url.url_list.updateCartCount,
       data: {
         id: id,
         count: count
@@ -86,7 +87,7 @@ App({
   // 更新购物车的selected
   updateCartSelected: function (that, id, selected) {
     wx.request({
-      url: 'http://weixin.com/admin/updateShopCartSelectedBySCId.php',
+      url: url.url_list.updateCartSelected,
       data: {
         id: id,
         selected: selected
@@ -101,7 +102,7 @@ App({
   // 更新购物车全选的selected
   updateCartAllSelected: function (that, sc_id_array, selected) {
     wx.request({
-      url: 'http://weixin.com/admin/updateShopCartAllSelectedBySCId.php',
+      url: url.url_list.updateCartAllSelected,
       data: {
         id: sc_id_array,
         selected: selected
@@ -110,6 +111,21 @@ App({
         // console.log(res.data);
         // 重新加载购物车，并计算商品价格。
         getApp().getCart(that);
+      }
+    })
+  },
+  // 结算选中的商品
+  getShopCartSelected:function(that, rt){
+    wx.request({
+      url: url.url_list.getCart,
+      data:{
+        rt: rt
+      },
+      success:function(res){
+        console.log('hhh:'+res.data);
+        that.setData({
+          pay_commodity_list: res.data
+        });
       }
     })
   }
