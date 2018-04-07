@@ -1,6 +1,13 @@
 <view class='container'>
   <view class='user_info'>
     <view>用户信息</view>
+    <view class='userinfo'>
+      <button wx:if="{{!hasUsreInfo && canIUse}}" open-type='getUserInfo' bindgetuserinfo='getUserInfo'>点此登录</button>
+      <block wx:else>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
   </view>
   <view class='indent'>
     <view class='my_indent'>我的订单</view>

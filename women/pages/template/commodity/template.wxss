@@ -13,11 +13,6 @@
   float: left;
   position: relative;
 }
-.checkbox {
-  position:absolute;
-  top:0px;
-  left:10rpx;
-}
 .img {
   width: 90%;
   height: 80px;
@@ -30,15 +25,10 @@
 }
 /* 标题和删除按钮 */
 .td {
-  /* border: 1px solid #f33; */
   padding: 10rpx auto;
 }
 .title {
   padding-left: 10rpx;
-}
-.delete {
-  padding-right: 10rpx;
-  float: right;
 }
 /* 尺寸、颜色 */
 .sc {
@@ -60,21 +50,4 @@
 .count {
   width: 70%;
   float: right;
-  text-align: center;
-}
-.jian, .jia {
-  width:30%;
-  float:left;
-}
-.count_value {
-  width: 30%;
-  float: left;
-}
-.count_value input{
-  line-height: 2.3em;
-  color: #fff;
-}
-
-.delete {
-  color: #ccc;
 }

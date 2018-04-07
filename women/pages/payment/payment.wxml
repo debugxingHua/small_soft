@@ -1,4 +1,11 @@
 <import src="../template/commodity/template.wxml" />
-<view wx:for='{{pay_commodity_list}}' wx:key='' wx:for-item='item'>
-  <template is='commodity' />
-</view>
+<block wx:if="{{address}}">
+  <view class='address'>
+    <text bindtap='tanchu'>我的收货地址</text>
+  </view>
+</block>
+<block wx:for='{{pay_commodity_list}}' wx:key='' wx:for-item='item'>
+  <view class='container' bindtap='toContent'>
+    <template is='commodity' data='{{item}}' />
+  </view>
+</block>

@@ -5,16 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    address:'ko'
+  },
+  tanchu:function(){
+    wx.showActionSheet({
+      itemList: ['a','b','c'],
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -32,11 +35,11 @@ Page({
       pay_commodity_list: app.globalData.pay_commodity_list
     });
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
+  toContent:function(event){
+    console.log(event);
+    var id = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../shop_content/shop_content?id='+id
+    })
   }
 })

@@ -7,8 +7,24 @@ Page {
 
 .user_info {
   width: 100%;
-  height: 60px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #666;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
 }
 
 .indent{
