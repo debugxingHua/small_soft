@@ -1,0 +1,4 @@
+<!--pages/all_indent/all_indent.wxml-->
+<text>{{userInfo.avatarUrl}}</text>
+<text>{{userInfo.nickName}}</text>
+
