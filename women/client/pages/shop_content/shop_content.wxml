@@ -59,10 +59,10 @@
     <view class='cart' bindtap='tocart'>
       <text>购物车</text>
     </view>
-    <view class='addCart'  bindtap='addcart' data-id='{{commodity_data.commodity_id}}'>
+    <view class='addCart' bindtap='addCart' data-id='{{commodity_data.commodity_id}}'>
       <text>加入购物车</text>
     </view>
-    <view class='buy'>
+    <view class='buy' bindtap='addIndent' data-id='{{commodity_data.commodity_id}}'>
       <text>立即购买</text>
     </view>
   </view>

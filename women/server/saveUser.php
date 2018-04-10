@@ -23,12 +23,12 @@ if(isset($_REQUEST['code'])){
         $bool = $result_open_id->fetch();
         //用openid查询唯一后，不存在就啥也不做
         if(!$bool){
-//            $time_out = time()+259100;//过期时间
-//            $sql = "INSERT sf_user (open_id,date,time) VALUES ('{$open_id}','{$date}','{$time_out}') ";
-//            $num = $pdo->exec($sql);
-//            $lastId = $pdo->lastInsertId();
-//            $pdo = null;
-            echo json_encode('not_at');
+            $time_out = 0;//过期时间
+            $sql = "INSERT sf_user (open_id,date,time) VALUES ('{$open_id}','{$date}','{$time_out}') ";
+            $num = $pdo->exec($sql);
+            $lastId = $pdo->lastInsertId();
+            $pdo = null;
+            echo json_encode(["errMsg"=>"new",'user_id'=>$lastId]);
         }else{
 //          存在就校验time，time到期，就让前台的storage为空；
             $user_id = $bool['user_id'];
@@ -36,9 +36,9 @@ if(isset($_REQUEST['code'])){
             $time = time();
             //if过期时间比现在时间小，说明过期了。
             if($time_out < $time){
-                echo json_encode('time_out');
+                echo json_encode(["errMsg"=>"time_out",'user_id'=>$user_id]);
             }else{
-                echo json_encode('time_again');
+                echo json_encode(["errMsg"=>"time_again",'user_id'=>$user_id]);
             }
         }
     }catch (PDOException $e){

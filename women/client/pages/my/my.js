@@ -47,18 +47,9 @@ Page({
     })
   },
   onLoad: function () {
-    var that = this;
-    wx.getStorage({
-      key: 'userInfo',
-      success: function (res) {
-        that.setData({
-          hasUserInfo: true,
-          userInfo: res.data
-        });
-      }
-    })
   },
   onShow: function (){
+    var that = this;    
     wx.getStorage({
       key: 'userInfo',
       success: function (msg) {
@@ -86,6 +77,7 @@ Page({
           },
           success:function(res){
             e.detail.userInfo.user_id = res.data;
+            app.globalData.user_id = res.data;
             wx.setStorage({
               key: 'userInfo',
               data: e.detail.userInfo
@@ -93,7 +85,7 @@ Page({
             wx.getStorage({
               key: 'userInfo',
               success: function (msg) {
-                console.log(msg);
+                // console.log(msg);
                 that.setData({
                   hasUserInfo: true,
                   userInfo: msg.data

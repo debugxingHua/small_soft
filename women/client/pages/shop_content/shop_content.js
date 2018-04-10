@@ -18,13 +18,15 @@ Page({
   },
   addcart:function(event){
     var commodity_id = event.currentTarget.dataset.id;
+    //规格应该做成活动的，最后搞这个。
     var color = 'red22';
     var size = '11';
     var count = 1;
     app.addCart(commodity_id,color, size, count);
   },
-  bug: function (event){
-    console.log(event);
+  addIndent: function (event){
+    var commodity_id = event.currentTarget.dataset.id;    
+    console.log(commodity_id);
   },
   /**
  * 生命周期函数--监听页面加载

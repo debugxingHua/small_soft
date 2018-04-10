@@ -2,6 +2,7 @@
 require_once 'new_PDO.php';
 
 //获取请求的id
+$user_id = $_REQUEST['user_id'];
 $commodity_id = $_POST['commodity_id'];
 $count = $_POST['count'];
 $color = $_POST['color'];
@@ -14,14 +15,14 @@ try{
     $new_pdo = new new_PDO();
     $pdo = $new_pdo->pdo_object();
     //第一步：打开冰箱，用商品id查出购物车里有没有这个商品，有几个。
-    $sql_select_sc = "SELECT * FROM sf_shop_cart WHERE commodity_id='{$commodity_id}'";
+    $sql_select_sc = "SELECT * FROM sf_shop_cart WHERE user_id='{$user_id}' && commodity_id='{$commodity_id}'";
     $sc_data = $pdo->query($sql_select_sc);
     $sc_data->setFetchMode(PDO::FETCH_ASSOC);
     //判断有几个该商品
     $result_count = $sc_data->rowCount();
     if($result_count == 0){
         //购物车没有，说明该insert到购物车里哈。将商品的id、color、size、存入购物车；
-        $add_message = addShopCart($pdo,$commodity_id,$color,$size,$date,$count);
+        $add_message = addShopCart($pdo,$user_id,$commodity_id,$color,$size,$date,$count);
         echo json_encode($add_message);
     }else if($result_count == 1){
         //如果有一条，就要用fetch(),并且对比请求的size和color一样不。
@@ -33,7 +34,7 @@ try{
             echo json_encode($update_message);
         }else{
             //如果购物车没对应的size和color一样的，那么就加入购物车
-            $add_message = addShopCart($pdo,$commodity_id,$color,$size,$date,$count);
+            $add_message = addShopCart($pdo,$user_id,$commodity_id,$color,$size,$date,$count);
             echo json_encode($add_message);
         }
     }else if($result_count > 1){
@@ -53,7 +54,7 @@ try{
         }
         //message里update了已经，那么就不用add了
         if(!$message){
-            $message = addShopCart($pdo,$commodity_id,$color,$size,$date,$count);
+            $message = addShopCart($pdo,$user_id,$commodity_id,$color,$size,$date,$count);
         }
         echo json_encode($message);
     }
@@ -71,9 +72,9 @@ try{
  * @param $count
  * @return array
  */
-function addShopCart($pdo,$commodity_id,$color,$size,$date,$count){
-    $sql = "INSERT sf_shop_cart (commodity_id,color,size,date,count) VALUES
-            ('{$commodity_id}','{$color}','{$size}','{$date}','{$count}') ";
+function addShopCart($pdo,$user_id,$commodity_id,$color,$size,$date,$count){
+    $sql = "INSERT sf_shop_cart (commodity_id,user_id,color,size,date,count) VALUES
+            ('{$commodity_id}','{$user_id}','{$color}','{$size}','{$date}','{$count}') ";
     $num = $pdo->exec($sql);
     $lastId = $pdo->lastInsertId();
     return array('num'=>$num,'lastId'=>$lastId);

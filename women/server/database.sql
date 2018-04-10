@@ -98,6 +98,6 @@ CREATE TABLE `sf_shop_cart` (
   PRIMARY KEY (`sc_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
-INSERT INTO `sf_shop_cart` VALUES(1,1,2,'red','12cm','2018年3月26日18:00:05',1,1);
+INSERT INTO `sf_shop_cart` VALUES(1,18,2,'red','12cm','2018年3月26日18:00:05',1,1);
 INSERT INTO `sf_shop_cart` VALUES(2,2,3,'blue','13cm','2018年3月26日18:00:09',1,1);
 INSERT INTO `sf_shop_cart` VALUES(3,3,2,'red','14cm','2016年3月26日18:00:13',1,1);

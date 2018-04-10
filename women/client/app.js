@@ -1,7 +1,8 @@
 //app.js
-var url_list = require('./config.js')
+var url_list = require('./config.js');
 App({
   globalData: {
+    user_id:'',
     pbl_datas : '',
     commodity : '',
     shop_cart_count: 0,
@@ -9,10 +10,16 @@ App({
   },
   // 获取购物车数据
   getCart: function (that) {
+    var user_id = this.globalData.user_id;
+    // console.log(user_id);
     // 获取后台shopcart数据
     wx.request({
       url: url_list.url_list.getCart,
+      data: {
+        user_id: user_id
+      },
       success: function (res) {
+        // console.log(res);
         var data = res.data;
         var length = data.length;
         var money_all = 0;
@@ -20,11 +27,11 @@ App({
         var sc_id_array_no = Array();
         var sc_id_array_all = Array();
         // 遍历集合，计算所有选中的总价
-        for(var i = 0;i<length; i++){
-          if (data[i].selected == 1){
+        for (var i = 0; i < length; i++) {
+          if (data[i].selected == 1) {
             money_all += parseInt(data[i].money_now) * parseInt(data[i].count)
             sc_id_array_all[sc_id_array_all.length] = data[i].sc_id;
-          }else{
+          } else {
             selected_all = false;
             sc_id_array_no[sc_id_array_no.length] = data[i].sc_id;
           }
@@ -43,6 +50,7 @@ App({
   },
   // 添加购物车
   addCart: function (commodity_id, color, size, count){
+    var user_id = this.globalData.user_id; 
     wx.request({
       url: url_list.url_list.addShopCart,
       header: {
@@ -50,6 +58,7 @@ App({
       },
       method: 'POST',
       data: {
+        user_id: user_id,
         commodity_id: commodity_id,
         color: color,
         size: size,
@@ -70,10 +79,13 @@ App({
   },
   // 更新购物车的count
   updateCartCount: function (that, id,count){
+    //先判断当前是否存在user_id
+    var user_id = this.globalData.user_id;
     wx.request({
       url: url_list.url_list.updateCartCount,
       data: {
         id: id,
+        user_id: user_id,
         count: count
       },
       success: function (res) {
@@ -85,10 +97,13 @@ App({
   },
   // 更新购物车的selected
   updateCartSelected: function (that, id, selected) {
+    //先判断当前是否存在user_id
+    var user_id = this.globalData.user_id;
     wx.request({
       url: url_list.url_list.updateCartSelected,
       data: {
         id: id,
+        user_id: user_id,
         selected: selected
       },
       success: function (res) {
@@ -100,7 +115,10 @@ App({
   },
   // 更新购物车全选的selected
   updateCartAllSelected: function (that, sc_id_array, selected) {
+    //先判断当前是否存在user_id
+    var user_id = this.globalData.user_id;
     wx.request({
+      user_id: user_id,
       url: url_list.url_list.updateCartAllSelected,
       data: {
         id: sc_id_array,
@@ -113,14 +131,38 @@ App({
       }
     })
   },
+  //删除购物车商品
+  delete_cart_commodity: function (that,commodity_id) {
+    var user_id = this.globalData.user_id;
+    wx.request({
+      url: url_list.url_list.deleteShopCartComodityById,
+      data: {
+        'id': commodity_id,
+        'user_id': user_id
+      },
+      success: function (res) {
+        console.log(res.data);
+        if (res.data.num > 0) {
+          wx.showToast({
+            title: '删除成功',
+            icon: 'succes',
+            duration: 1000
+          })
+        }
+        getApp().getCart(that);
+      }
+    })
+  },
   // 结算选中的商品
   getShopCartSelected:function(that, rt){
+    var user_id = this.globalData.user_id;
     wx.request({
       url: url_list.url_list.getCart,
-      data:{
-        rt: rt
+      data: {
+        rt: rt,
+        user_id:user_id
       },
-      success:function(res){
+      success: function (res) {
         that.setData({
           pay_commodity_list: res.data
         });
@@ -128,23 +170,7 @@ App({
     })
   },
   onLaunch:function(){
-    // wx.getSetting({
-    //   success: res => {
-    //     if (res.authSetting['scope.userInfo']) {
-    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-    //       wx.getUserInfo({
-    //         success: res => {
-    //           // 可以将 res 发送给后台解码出 unionId
-    //           this.globalData.userInfo = res.userInfo
-    //           // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回,所以此处加入 callback 以防止这种情况
-    //           if (this.userInfoReadyCallback) {
-    //             this.userInfoReadyCallback(res)
-    //           }
-    //         }
-    //       })
-    //     }
-    //   }
-    // });
+    var that = this;
     // 调用login获取临时登录凭证
     wx.login({
       success: function (res) {    
@@ -160,17 +186,20 @@ App({
               'content-type': 'application/x-www-form-urlencoded'
             },
             success: function (res) {
-              if (res.data == 'time_out'){
+              // console.log('???'+res.data.user_id);
+              //保存用户id
+              that.globalData.user_id = res.data.user_id;
+              if (res.data.errMsg == 'time_out'){
                 console.log('过期了');                
                 try {
                   wx.removeStorageSync('userInfo')
                 } catch (e) {
                   console.log('error:'+e);
                 }
-              }else if(res.data == 'not_at'){
-                console.log('没登录过');
-              }else{
+              } else if (res.data.errMsg == 'time_again'){
                 console.log('有效');
+              }else{
+                console.log('new');
               }
             }
           })
