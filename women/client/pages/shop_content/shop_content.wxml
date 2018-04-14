@@ -19,7 +19,7 @@
     <text class='money_now'>￥{{commodity_data.money_now}}</text>
     <text class='money_old'>￥{{commodity_data.money_old}}</text>
     <!-- 快递 -->
-    <text class='expressage'>{{commodity_data.expressage}}</text>
+    <text class='expressage'>{{commodity_data.expressage}} 元</text>
   </view>
   <view class='specification'>
     <!-- 规格尺码 -->
@@ -56,13 +56,13 @@
     <view class='sy' bindtap='tosy'>
       <text>首页</text>
     </view>
-    <view class='cart' bindtap='tocart'>
+    <view class='cart' bindtap='toCart'>
       <text>购物车</text>
     </view>
     <view class='addCart' bindtap='addCart' data-id='{{commodity_data.commodity_id}}'>
       <text>加入购物车</text>
     </view>
-    <view class='buy' bindtap='addIndent' data-id='{{commodity_data.commodity_id}}'>
+    <view class='buy' bindtap='buy'>
       <text>立即购买</text>
     </view>
   </view>

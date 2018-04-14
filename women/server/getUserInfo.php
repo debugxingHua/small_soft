@@ -24,11 +24,11 @@ if(isset($_REQUEST['code'])){
         $bool = $result_open_id->fetch();
         //用openid查询唯一后，不存在就insert
         if(!$bool){
-            $sql = "INSERT sf_user (open_id,date,time) VALUES ('{$open_id}','{$date}','{$time_out}') ";
-            $num = $pdo->exec($sql);
-            $lastId = $pdo->lastInsertId();
-            $pdo = null;
-            echo json_encode($lastId);
+//            $sql = "INSERT sf_user (open_id,date,time) VALUES ('{$open_id}','{$date}','{$time_out}') ";
+//            $num = $pdo->exec($sql);
+//            $lastId = $pdo->lastInsertId();
+//            $pdo = null;
+//            echo json_encode($lastId);
         }else{
             $user_id = $bool['user_id'];
             $count = intval($bool['count']) + 1;

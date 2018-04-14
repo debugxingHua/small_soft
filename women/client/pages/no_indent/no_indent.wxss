@@ -1,1 +1,56 @@
-/* pages/no_indent/no_indent.wxss */
+@import "../template/indent_commodity/template.wxss";
+.container {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.indent_container {
+  width: 100%;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  margin-top: 4px;
+}
+
+.indent_one {
+  font-weight:bold;
+  width: 100%;
+  margin-top: 10px;
+  height: 25px;
+  border-bottom: 1px solid #ccc;  
+}
+ .shopname,.status {
+  width: 50%;
+  float: left;
+}
+ .status text {
+  padding-right: 10px; 
+  float: right;
+}
+
+.money_ex {
+  width:100%;
+  height:45px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.all_money_pay {
+  width:100%;
+  float:left;
+}
+.pay_money_text {
+  padding-right: 15px;
+  float:right;
+  color: red;
+}
+
+.operation {
+  width: 100%;
+  height: 40px;
+  padding-top: 10px;
+}
+.btn1,.btn2 {
+  margin-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  float: right;
+}

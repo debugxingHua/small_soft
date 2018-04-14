@@ -53,7 +53,7 @@ Page({
     wx.getStorage({
       key: 'userInfo',
       success: function (msg) {
-        console.log(msg);
+        // console.log('msg:'+msg);
         that.setData({
           hasUserInfo: true,
           userInfo: msg.data
@@ -63,38 +63,43 @@ Page({
   },
   getUserInfo: function (e) {
     var that = this;
-    //授权，添加进数据库
-    wx.login({
-      success:function(res){
-        wx.request({
-          url: url_list.url_list.getUserInfo,
-          method:'POST',
-          data:{
-            code:res.code
-          },
-          header: {
-            'content-type': 'application/x-www-form-urlencoded'
-          },
-          success:function(res){
-            e.detail.userInfo.user_id = res.data;
-            app.globalData.user_id = res.data;
-            wx.setStorage({
-              key: 'userInfo',
-              data: e.detail.userInfo
-            });
-            wx.getStorage({
-              key: 'userInfo',
-              success: function (msg) {
-                // console.log(msg);
-                that.setData({
-                  hasUserInfo: true,
-                  userInfo: msg.data
-                });
-              }
-            })
-          }
-        })
-      }
-    })
+    // e.detail.userInfo.user_id = app.globalData.user_id;
+    if (e.detail.errMsg == "getUserInfo:ok"){
+      e.detail.userInfo.user_id = app.globalData.user_id;
+      wx.setStorage({
+        key: 'userInfo',
+        data: e.detail.userInfo
+      });
+      wx.getStorage({
+        key: 'userInfo',
+        success: function (msg) {
+          // console.log('getStoragemsg:' + JSON.stringify(msg.data));
+          that.setData({
+            hasUserInfo: true,
+            userInfo: msg.data
+          });
+        }
+      })
+      //授权，更新授权次数和timeout时间；
+      wx.login({
+        success: function (res) {
+          wx.request({
+            url: url_list.url_list.getUserInfo,
+            method: 'POST',
+            data: {
+              code: res.code
+            },
+            header: {
+              'content-type': 'application/x-www-form-urlencoded'
+            },
+            success: function (res) {
+              console.log('res：timeout已更新');
+            }
+          })
+        }
+      })
+    }else{
+      console.log('error');      
+    }
   }
 })

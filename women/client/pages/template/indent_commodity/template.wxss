@@ -5,6 +5,8 @@
   padding-top:10px; 
   /* border: 1px solid #f33; */
   margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
 }
 /* 图片 */
 .img_container {
@@ -43,11 +45,15 @@
   padding-left: 10rpx;
 }
 .money {
-  width: 30%;
+  width: 50%;
   color: #f33;
   float: left;
 }
 .count {
-  width: 70%;
+  width: 50%;
+  float: left;
+}
+.count text {
+  padding-right: 15px;
   float: right;
 }

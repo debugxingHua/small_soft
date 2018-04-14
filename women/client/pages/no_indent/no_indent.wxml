@@ -1,2 +1,38 @@
-<!--pages/no_indent/no_indent.wxml-->
-<text>pages/no_indent/no_indent.wxml</text>
+<import src="../template/indent_commodity/template.wxml" />
+
+<block wx:if="{{hasIndent}}">
+  <view class='container'>
+    <view class='indent_container' wx:for="{{indentList}}" wx:key="" wx:for-item="item" wx:for-index="index">
+      <view class='indent_one'>
+        <view class='shopname'><text style='padding-left:10px;'>女人的衣服</text></view>
+        <view class='status'>
+          <view wx:if="{{item.status == 1}}"><text>微信支付|待付款</text></view>
+          <view wx:if="{{item.status == 2}}"><text>微信支付|待收货</text></view>
+          <view wx:if="{{item.status == 3}}"><text>微信支付|交易成功</text></view>
+          <view wx:if="{{item.status == 4}}"><text>微信支付|交易关闭</text></view>
+        </view>
+      </view>
+       <view class='commodity'>
+        <template is="commodity" data="{{item}}" />
+      </view>
+      <view class='money_ex'>
+        <view class='ex'>
+          运费：￥<text style='color:red'>{{item.expressage}} </text>
+          总金额：￥<text style='color:red'>{{item.pay_money}} </text>
+        </view>
+        <view class='all_money_pay'>
+          <text class='pay_money_text'>合计：{{item.money}} 元</text>
+        </view>
+      </view>
+      <view class='operation'>
+        <button class='btn2' size='mini'>付款</button>
+        <button class='btn1' size='mini'>取消订单</button>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <view>
+    <text>暂无订单</text>
+  </view>
+</block>

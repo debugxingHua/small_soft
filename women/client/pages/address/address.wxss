@@ -1,1 +1,126 @@
-/* pages/address/address.wxss */
+.address_list{
+  background-color: #E8E8EA;
+  margin-top: 10px;
+  border-bottom: 1px solid #ccc; 
+}
+.address_list view {
+  padding: 5px auto;
+}
+.address_list .icon {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+}
+.name , .postcode {
+  width: 50%;
+  float: left;
+}
+.container {
+  margin: 10px;
+}
+.operation {
+  width: 100%;
+  margin-top: 5px; 
+}
+.operation text {
+  height: 20px;
+  color: #ccc;
+}
+.operation .delete {
+  float: right;
+}
+.operation .edit {
+  float: right;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+.use {
+  width: 50%;
+  float: left;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: green;
+}
+.add {
+  width: 50%;
+  float: left;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: red;  
+}
+
+/* 弹出层 */
+.popup_container {
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  background-color: #F8F8F8;
+}
+.drawer_title{ 
+  padding:15px;  
+  font: 20px "microsoft yahei";  
+  text-align: center;  
+}
+   
+.btn_ok{
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px; 
+  font: 20px "microsoft yahei";
+  float: left;
+  border-top: 1px solid #E8E8EA;  
+  color: #3CC51F;  
+} 
+   
+.top{ 
+    padding-top:8px;  
+} 
+.bottom { 
+    padding-bottom:8px;  
+} 
+.title { 
+    height: 30px;  
+    line-height: 30px;  
+    width: 160rpx;  
+    text-align: center;  
+    display: inline-block;  
+    font: 300 28rpx/30px "microsoft yahei";  
+} 
+   
+.input_base { 
+    border: 2rpx solid #ccc;  
+    padding-left: 10rpx;  
+    margin-right: 50rpx;  
+} 
+.input_h30{ 
+    height: 30px;  
+    line-height: 30px;  
+} 
+.input_h60{ 
+    height: 60px;  
+} 
+.input_view{ 
+    font: 12px "microsoft yahei";  
+    background: #fff;  
+    color:#000;  
+    line-height: 30px;  
+} 
+   
+input { 
+    font: 12px "microsoft yahei";  
+    background: #fff;  
+    color:#000 ;  
+} 
+radio{ 
+    margin-right: 20px;  
+} 
+.grid { display: -webkit-box; display: box; } 
+.col-0 {-webkit-box-flex:0;box-flex:0;} 
+.col-1 {-webkit-box-flex:1;box-flex:1;} 
+.fl { float: left;} 
+.fr { float: right;} 

@@ -1,11 +1,99 @@
-<import src="../template/commodity/template.wxml" />
-<block wx:if="{{address}}">
-  <view class='address'>
-    <text bindtap='tanchu'>我的收货地址</text>
+<!-- 订单提交 -->
+<view class='container'>
+  <!-- 地址 -->
+  <view class='address_container'>
+    <view class='address_no' wx:if='{{address == "空"}}' bindtap='addAddress'>
+      <text>点击添加地址</text>
+    </view>
+    <view class='address_yes' wx:else>
+      <view class='address_message' style='width:100%;'>
+        <view style='width:50%;float:left;'>收货信息</view>
+        <view style='width:50%;float:left;color:blue;' bindtap='resetAddress'>
+          <text style='float:right;padding-right:10px;'>换个地址</text>
+        </view>
+      </view>
+      <view class='name'>
+        <text>姓名: {{address.name}}</text>
+      </view>
+      <view class='phone'>
+        <text style='float:right;padding-right:10px;'>电话: {{address.phone}}</text>      
+      </view>
+      <view class='address'>
+        <text>地址: {{address.address}}</text>
+      </view>
+    </view>
   </view>
-</block>
-<block wx:for='{{pay_commodity_list}}' wx:key='' wx:for-item='item'>
-  <view class='container' bindtap='toContent'>
-    <template is='commodity' data='{{item}}' />
+  <view class='jg'></view>
+  <view class='commodity' wx:for="{{sc_array_select}}" wx:for-item="item" wx:key="" wx:for-index="index">
+    <view class='shopname'>女人的衣服</view>
+    <view class='shop_content'>
+      <!-- 商品图 -->
+      <view class='img_container'>
+        <image  class='img' src='{{item.img_url}}'></image>
+      </view>
+      <!-- 商品内容 -->
+      <view class='content_container'>
+        <!-- 标题 -->
+        <view class='td'>
+          <text class='title'>{{item.title}}</text>
+        </view>
+        <!-- 尺寸及颜色 -->
+        <view class='sc'>
+          <text class='sc_text'>尺寸：{{item.size}} 颜色：{{item.color}}</text>
+        </view>
+        <!-- 价格及数量 -->
+        <view class='mc'>
+          <view class='money'>
+            <text>￥{{item.money_now}}</text>
+          </view>
+          <view class='count'>
+              <text style='float:right;padding-right:15px;'> X {{item.count}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
-</block>
+  <!-- 支付金额 -->
+  <view class='all_money'>
+    <view class='money_continer'>
+      <view class='money_text'>
+        <text style='color:red;' space='ensp'>￥</text>
+        <text>支付金额</text>
+      </view>
+      <view class='money_yuan'>
+        <view style='float:right;'>
+          运费:<text style='color:red'> {{yf}}</text>元
+          总计: <text style='color:red' space='nbsp'>{{pay_money}}</text>元 
+        </view>
+      </view>
+    </view>
+    <!-- 合计 -->    
+    <view style='float:right;'>
+      应付: <text style='color:red' space='nbsp'>{{money_all}}</text>元 
+    </view>
+  </view>
+  <!-- 支付方式 -->
+  <view class='pay'>
+    <view class='pay_continer'>
+      <view class='weixin'>
+        <icon size='15' type='success'></icon>
+        <text>微信支付</text>
+      </view>
+      <view class='pay_icon'>
+        <icon class='icon' size='15' type='success' color='red'></icon>
+      </view>
+    </view>
+  </view>
+  <!-- 留言 -->
+  <view class='leaveWord'>
+    <view>
+      <text>买家留言:</text>
+    </view>
+    <view>
+      <input type='text' bindinput='leaveWordInput' placeholder='建议填写与卖家商量好的信息哦'></input>
+    </view>
+  </view>
+  <view class='addIndent'>
+    <button style='background-color:red;' bindtap='addIndent'>支付订单</button>
+  </view>
+</view>

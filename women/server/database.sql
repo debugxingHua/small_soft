@@ -35,11 +35,11 @@ CREATE TABLE `sf_commodity` (
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 INSERT INTO `sf_commodity` VALUES(1,'你所不知道的红酒','http://f10.baidu.com/it/u=121654667,1482133440&fm=72','199','599',0,1000,'红色','50cm',0,1);
-INSERT INTO `sf_commodity` VALUES(2,'电饭锅电饭锅水','http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg','99','499',0,1000,'红色','50cm',0,1);
-INSERT INTO `sf_commodity` VALUES(3,'第三方拉拉队首付','http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=27&gp=0.jpg','199','699',0,1000,'红色','50cm',0,1);
+INSERT INTO `sf_commodity` VALUES(2,'电饭锅电饭锅水','http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg','99','499',1,1000,'红色','50cm',0,1);
+INSERT INTO `sf_commodity` VALUES(3,'第三方拉拉队首付','http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=27&gp=0.jpg','199','699',8,1000,'红色','50cm',0,1);
 INSERT INTO `sf_commodity` VALUES(4,'水电费是否对啥的水电费大法','http://f10.baidu.com/it/u=121654667,1482133440&fm=72','199','599',0,1000,'红色','50cm',0,1);
-INSERT INTO `sf_commodity` VALUES(5,'手动阀手动阀士大夫撒发达手动阀是的发送到','http://f10.baidu.com/it/u=121654667,1482133440&fm=72','699','799',0,1000,'红色','50cm',0,1);
-INSERT INTO `sf_commodity` VALUES(6,'飞手动阀发斯蒂芬手动阀打死废物egg','http://f10.baidu.com/it/u=121654667,1482133440&fm=72','199','599',0,1000,'红色','50cm',0,1);
+INSERT INTO `sf_commodity` VALUES(5,'手动阀手动阀士大夫撒发达手动阀是的发送到','http://f10.baidu.com/it/u=121654667,1482133440&fm=72','699','799',7,1000,'红色','50cm',0,1);
+INSERT INTO `sf_commodity` VALUES(6,'飞手动阀发斯蒂芬手动阀打死废物egg','http://f10.baidu.com/it/u=121654667,1482133440&fm=72','199','599',2,1000,'红色','50cm',0,1);
 
 --  创建商品详情图片表
 --  图片详情列表：关联商品commodity_id、img_url、
@@ -101,3 +101,38 @@ CREATE TABLE `sf_shop_cart` (
 INSERT INTO `sf_shop_cart` VALUES(1,18,2,'red','12cm','2018年3月26日18:00:05',1,1);
 INSERT INTO `sf_shop_cart` VALUES(2,2,3,'blue','13cm','2018年3月26日18:00:09',1,1);
 INSERT INTO `sf_shop_cart` VALUES(3,3,2,'red','14cm','2016年3月26日18:00:13',1,1);
+
+
+--  创建订单
+DROP TABLE IF EXISTS `sf_indent`;
+CREATE TABLE `sf_indent` (
+  `indent_id` mediumint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` SMALLINT (6) NOT NULL DEFAULT 0,
+  `address_id` SMALLINT (6) NOT NULL DEFAULT 0,
+  `commodity_id` VARCHAR (100) NOT NULL DEFAULT ',',
+  `color` varchar(100) NOT NULL DEFAULT '',
+  `size` varchar(100) NOT NULL DEFAULT '',
+  `date` VARCHAR (100) NOT NULL DEFAULT '',
+  `count` VARCHAR (100) NOT NULL DEFAULT 1,
+  `red_bag` INT(100) NOT NULL DEFAULT 0,
+  `pay_money` VARCHAR (100) NOT NULL DEFAULT '',
+  `money` VARCHAR (100) NOT NULL DEFAULT '',
+  `leave_word_input` VARCHAR (1000) NOT NULL DEFAULT '',
+  `status` SMALLINT(10) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`indent_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+--  创建地址信息
+--  用户id、姓名、邮编、电话、地址、默认地址、状态
+DROP TABLE IF EXISTS `sf_address`;
+CREATE TABLE `sf_address` (
+  `address_id` mediumint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` SMALLINT (6) NOT NULL DEFAULT 0,
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `postcode` varchar(100) NOT NULL DEFAULT '',
+  `phone` VARCHAR (100) NOT NULL DEFAULT '',
+  `address` VARCHAR (100) NOT NULL DEFAULT '',
+  `default` INT(2) NOT NULL DEFAULT 0,
+  `status` SMALLINT(10) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`address_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;

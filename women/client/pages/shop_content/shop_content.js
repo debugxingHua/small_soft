@@ -11,12 +11,12 @@ Page({
       url: '../index/index',
     })
   },
-  tocart: function (event){
+  toCart: function (event){
     wx.switchTab({
       url: '../shopcar/shopcar',
     })
   },
-  addcart:function(event){
+  addCart:function(event){
     var commodity_id = event.currentTarget.dataset.id;
     //规格应该做成活动的，最后搞这个。
     var color = 'red22';
@@ -24,13 +24,30 @@ Page({
     var count = 1;
     app.addCart(commodity_id,color, size, count);
   },
-  addIndent: function (event){
-    var commodity_id = event.currentTarget.dataset.id;    
-    console.log(commodity_id);
+  //去添加订单
+  buy: function (event){
+    //将sc_array_select弄成数组
+    var sc_array_select = Array(
+      this.data.commodity_data
+    );
+    app.globalData.sc_array_select = sc_array_select;
+    //此处设置参数
+    app.globalData.sc_array_select[0].color = 'red';
+    app.globalData.sc_array_select[0].size = '30cm';
+    app.globalData.sc_array_select[0].count = 1;
+    //算出金额、运费、总金额、
+    var money_now = Number(this.data.commodity_data.money_now);
+    var count = Number(app.globalData.sc_array_select[0].count);
+    var expressage = Number(this.data.commodity_data.expressage);
+    var money_all = money_now * count + expressage;
+    var pay_money = money_now * count;
+    wx.navigateTo({
+      url: '../payment/payment?money_all=' + money_all
+    }) 
   },
   /**
  * 生命周期函数--监听页面加载
- */
+ */ 
   onLoad: function (options) {
     var that = this;
     var commodity_id = options.id;

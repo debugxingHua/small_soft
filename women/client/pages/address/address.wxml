@@ -1,2 +1,67 @@
-<!--pages/address/address.wxml-->
-<text>pages/address/address.wxml</text>
+<import src="../template/picker_date/template.wxml" />
+<!-- 地址列表 -->
+<view class='container'>
+<block wx:for="{{addressList}}" wx:key="" wx:for-item="item" wx:if="{{hasAddress}}" wx:for-index="index">
+  <view class='address_list' bindtap='selectedIndex' data-index='{{index}}'>
+    <view wx:if='{{item.default == 1}}'>
+      <icon class='icon' size='15' type='success'>设为默认</icon>
+    </view>
+    <view class='name'>
+      <text>姓名：</text>
+      <text>{{item.name}}</text>
+    </view>
+    <view class='postcode'>
+      <text  style='float:right;padding-right:2px;'>邮编：{{item.postcode}}</text>
+    </view>
+    <view class='phone'>
+      <text>电话：</text>
+      <text>{{item.phone}}</text>
+    </view>
+    <view class='address'>
+      <text>地址：</text>
+      <text>{{item.address}}</text>
+    </view>
+    <view class='operation'>
+      <text class='default' >设为默认</text>
+      <text class='delete' space='ensp'> 删除</text>
+      <text class='edit' space='ensp'> 编辑</text>
+    </view>
+  </view>
+</block>
+</view>
+<view class='footer'>
+  <view class='use'> U 使用微信地址</view>
+  <view class='add' bindtap='toAddAddress'> + 添加收货地址</view>
+</view>
+
+<!-- 设置弹窗页面 -->
+<view class="popup_container" wx:if="{{showModalStatus}}"> 
+  <!--drawer content-->  
+  <view class="drawer_title">添加地址</view>
+  <form bindsubmit="addAddress" bindreset="formReset">
+    <view class="drawer_content">
+      <view class="top grid"> 
+        <label class="title col-0">收货姓名</label> 
+        <input class="input_base input_h30 col-1" name="name" placeholder="请输入真实姓名"></input> 
+      </view> 
+      <view class="top grid"> 
+        <label class="title col-0">手机号码</label> 
+        <input class="input_base input_h30 col-1" name="phone" placeholder="11位" maxlength='11'></input> 
+      </view>
+      <!-- <view class="top grid">  -->
+        <!-- <label class="title col-0">选择地区</label> -->
+        <!-- <input class="input_base input_h30 col-1" name="" placeholder="这里要写一个showmodel全国的省县区，最后写；" maxlength='11'></input> -->
+      <!-- </view> -->
+    </view>
+    <view class="top grid">
+      <label class="title col-0">地区邮编</label> 
+      <input class="input_base input_h30 col-1" name="postcode" placeholder='031100'></input> 
+    </view>
+    <view class="top grid">
+      <label class="title col-0">详细地址</label> 
+      <input class="input_base input_h30 col-1" name="address" placeholder='省市县区'></input> 
+    </view>
+    <button class='btn_ok' form-type='submit'>确定</button>
+    <button class='btn_ok' form-type='reset'>取消</button>
+  </form>
+</view>

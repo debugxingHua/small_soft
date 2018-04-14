@@ -6,8 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    shop_name: "女王的衣柜",
-    user_id:0
+    shop_name: "女王的衣柜"
   },
   // 检查单个全选状态
   bindCheckbox:function(event){
@@ -73,8 +72,10 @@ Page({
     // 停止向上冒泡
   },
   to_pay: function(event){
+    app.globalData.sc_array_select = this.data.sc_array_select;
+    var money_all = this.data.money_all;
     wx.navigateTo({
-      url: '../payment/payment'
+      url: '../payment/payment?money_all='+money_all
     })
   },
   onShow: function (options) {
@@ -96,8 +97,5 @@ Page({
     var that = this;
     var id = event.currentTarget.dataset.id;
     app.delete_cart_commodity(that,id);
-  },
-  checkbox_all: function(event){
-    console.log(event);
   }
 })

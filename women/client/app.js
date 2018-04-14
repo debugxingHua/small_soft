@@ -6,12 +6,11 @@ App({
     pbl_datas : '',
     commodity : '',
     shop_cart_count: 0,
-    pay_commodity_list:Array()
+    commodity_cart_buy:{}
   },
   // 获取购物车数据
   getCart: function (that) {
     var user_id = this.globalData.user_id;
-    // console.log(user_id);
     // 获取后台shopcart数据
     wx.request({
       url: url_list.url_list.getCart,
@@ -26,11 +25,13 @@ App({
         var selected_all = true;
         var sc_id_array_no = Array();
         var sc_id_array_all = Array();
+        var sc_array_select = Array();
         // 遍历集合，计算所有选中的总价
         for (var i = 0; i < length; i++) {
           if (data[i].selected == 1) {
             money_all += parseInt(data[i].money_now) * parseInt(data[i].count)
             sc_id_array_all[sc_id_array_all.length] = data[i].sc_id;
+            sc_array_select[sc_array_select.length] = data[i];
           } else {
             selected_all = false;
             sc_id_array_no[sc_id_array_no.length] = data[i].sc_id;
@@ -43,7 +44,8 @@ App({
           money_all: money_all,
           selected_all: selected_all,
           sc_id_array_all: sc_id_array_all,
-          sc_id_array_no: sc_id_array_no
+          sc_id_array_no: sc_id_array_no,
+          sc_array_select: sc_array_select
         });
       }
     })
@@ -178,7 +180,7 @@ App({
           //获取用户openId和session
           wx.request({
             url: url_list.url_list.saveUser,
-            method: 'POST',
+            method: 'POST', 
             data: {
               code: res.code
             },
@@ -190,7 +192,7 @@ App({
               //保存用户id
               that.globalData.user_id = res.data.user_id;
               if (res.data.errMsg == 'time_out'){
-                console.log('过期了');                
+                console.log('过期了');
                 try {
                   wx.removeStorageSync('userInfo')
                 } catch (e) {
@@ -206,6 +208,52 @@ App({
         } else {
           console.log('登录失败！' + res.errMsg)
         }
+      }
+    })
+  },
+  getAddressListByUserId: function (that) {
+    //获取地址列表
+    wx.request({
+      url: url_list.url_list.getAddressListByUserId,
+      data: {
+        user_id: this.globalData.user_id
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
+      success: function (res) {
+        // console.log(res.data);
+        if (res.data.errMsg != "空") {
+          that.setData({
+            addressList: res.data,
+            hasAddress: true
+          });
+        }
+      }
+    })
+  },
+  getIndent:function(that,data){
+    wx.request({
+      url: url_list.url_list.getIndentByStatus,
+      data: data,
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
+      success: function (res) {
+        that.setData({
+          hasIndent:true,
+          indentList : res.data
+        });
+        // console.log('res:' + JSON.stringify(res.data));        
+      },
+      fail: function (res) {
+        console.log(res.data);
       }
     })
   }

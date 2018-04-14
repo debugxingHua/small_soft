@@ -26,7 +26,17 @@ var config = {
   getCommodityById: `${host}/getCommodityById.php`,
   getCommodityImgById: `${host}/getCommodityImgById.php`,
   getUserInfo: `${host}/getUserInfo.php`,
-  saveUser: `${host}/saveUser.php`
+  saveUser: `${host}/saveUser.php`,
+  //地址
+  addAddress: `${host}/address/addAddress.php`, 
+  getAddressListByUserId: `${host}/address/getAddressListByUserId.php`,
+
+  //订单
+  addIndent: `${host}/indent/addIndent.php`,
+  getIndentByStatus: `${host}/indent/getIndentByStatus.php`,
+  addCartIndent: `${host}/indent/addCartIndent.php`,
+  addIndent3: `${host}/indent/addIndent.php`
+  
 };
 
 module.exports = {
