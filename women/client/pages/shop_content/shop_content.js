@@ -42,7 +42,7 @@ Page({
     var money_all = money_now * count + expressage;
     var pay_money = money_now * count;
     wx.navigateTo({
-      url: '../payment/payment?money_all=' + money_all
+      url: '../payment/payment?money_all=' + money_all+'&types=buy'
     }) 
   },
   /**

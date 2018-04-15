@@ -48,8 +48,10 @@ Page({
         data: {
           'user_id': app.globalData.user_id,
           'address_id': that.data.address.address_id,
+          'types': that.data.types,
           'commodity': JSON.stringify(that.data.sc_array_select),
           'red_bag': 0,
+          'yf': that.data.yf,
           'money': that.data.money_all,
           'pay_money': that.data.pay_money,
           'leave_word_input': that.data.leaveWordInput
@@ -86,6 +88,7 @@ Page({
     that.setData({
       sc_array_select: app.globalData.sc_array_select,
       yf: yf,
+      types : options.types,
       pay_money: pay_money,
       money_all: money_all
     });

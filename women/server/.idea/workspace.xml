@@ -11,42 +11,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="addCartIndent.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/indent/addCartIndent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="37" column="12" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="database.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="110" column="7" lean-forward="false" selection-start-line="110" selection-start-column="7" selection-end-line="110" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getIndentByStatus.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/indent/getIndentByStatus.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-              <folding>
-                <marker date="1523611217343" expanded="true" signature="196:487" ph="SELECT sf_in... sf_indent" />
-                <marker date="1523611217343" expanded="true" signature="196:492" ph="SELECT sf_in... sf_indent" />
-                <marker date="1523611217343" expanded="true" signature="514:773" ph="SELECT * FRO... sf_indent" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -78,11 +43,12 @@
         <option value="$PROJECT_DIR$/address/addAddress.php" />
         <option value="$PROJECT_DIR$/address/getAddressListByUserId.php" />
         <option value="$PROJECT_DIR$/getUserInfo.php" />
-        <option value="$PROJECT_DIR$/indent/getIndentByStatus.php" />
         <option value="$PROJECT_DIR$/indent/addIndent.php" />
-        <option value="$PROJECT_DIR$/database.sql" />
         <option value="$PROJECT_DIR$/getShopCartSelect.php" />
+        <option value="$PROJECT_DIR$/indent/getIndentsByStatus.php" />
+        <option value="$PROJECT_DIR$/database.sql" />
         <option value="$PROJECT_DIR$/indent/addCartIndent.php" />
+        <option value="$PROJECT_DIR$/indent/getIndentByStatus.php" />
       </list>
     </option>
   </component>
@@ -117,8 +83,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -161,6 +125,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,18 +246,18 @@
       <workItem from="1523503951001" duration="10524000" />
       <workItem from="1523581517407" duration="2088000" />
       <workItem from="1523590065894" duration="7879000" />
-      <workItem from="1523668968333" duration="9947000" />
+      <workItem from="1523668968333" duration="20246000" />
+      <workItem from="1523755295665" duration="7584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74784000" />
+    <option name="totallyTimeSpent" value="92667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21041666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21041666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -323,6 +289,23 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/indent/getIndentByStatus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1728">
+          <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+          <folding>
+            <element signature="e#409#672#0#PHP" expanded="false" />
+            <element signature="e#584#672#0#PHP" expanded="false" />
+            <element signature="e#2572#3245#0#PHP" expanded="false" />
+            <element signature="e#3395#3449#0#PHP" expanded="false" />
+            <marker date="1523764946234" expanded="true" signature="503:576" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523764946234" expanded="true" signature="613:664" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523764946234" expanded="true" signature="1395:1508" ph="SELECT commo... sf_commodity" />
+            <marker date="1523764946234" expanded="true" signature="2649:2758" ph="SELECT commo... sf_commodity" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/indent/addCartIndent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -355,9 +338,14 @@
         <state relative-caret-position="108">
           <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
           <folding>
-            <marker date="1523611217343" expanded="true" signature="196:487" ph="SELECT sf_in... sf_indent" />
-            <marker date="1523611217343" expanded="true" signature="196:492" ph="SELECT sf_in... sf_indent" />
-            <marker date="1523611217343" expanded="true" signature="514:773" ph="SELECT * FRO... sf_indent" />
+            <element signature="e#409#672#0#PHP" expanded="false" />
+            <element signature="e#584#672#0#PHP" expanded="false" />
+            <element signature="e#2572#3245#0#PHP" expanded="false" />
+            <element signature="e#3395#3449#0#PHP" expanded="false" />
+            <marker date="1523764946234" expanded="true" signature="503:576" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523764946234" expanded="true" signature="613:664" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523764946234" expanded="true" signature="1395:1508" ph="SELECT commo... sf_commodity" />
+            <marker date="1523764946234" expanded="true" signature="2649:2758" ph="SELECT commo... sf_commodity" />
           </folding>
         </state>
       </provider>
@@ -386,9 +374,14 @@
         <state relative-caret-position="243">
           <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding>
-            <marker date="1523611217343" expanded="true" signature="196:487" ph="SELECT sf_in... sf_indent" />
-            <marker date="1523611217343" expanded="true" signature="196:492" ph="SELECT sf_in... sf_indent" />
-            <marker date="1523611217343" expanded="true" signature="514:773" ph="SELECT * FRO... sf_indent" />
+            <element signature="e#409#672#0#PHP" expanded="false" />
+            <element signature="e#584#672#0#PHP" expanded="false" />
+            <element signature="e#2572#3245#0#PHP" expanded="false" />
+            <element signature="e#3395#3449#0#PHP" expanded="false" />
+            <marker date="1523764946234" expanded="true" signature="503:576" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523764946234" expanded="true" signature="613:664" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523764946234" expanded="true" signature="1395:1508" ph="SELECT commo... sf_commodity" />
+            <marker date="1523764946234" expanded="true" signature="2649:2758" ph="SELECT commo... sf_commodity" />
           </folding>
         </state>
       </provider>
@@ -401,14 +394,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indent/addIndent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/indent/addIndent.php" />
     <entry file="file://$PROJECT_DIR$/addShopCart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1593">
@@ -430,14 +416,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indent/addIndent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/indent/addIndent.php" />
     <entry file="file://$PROJECT_DIR$/database.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3132">
@@ -694,16 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deleteShopCartComodityById.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <marker date="1523326608820" expanded="true" signature="140:192" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getCommoditySelect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -724,26 +693,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indent/addIndent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indent/getIndentByStatus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding>
-            <marker date="1523611217343" expanded="true" signature="196:487" ph="SELECT sf_in... sf_indent" />
-            <marker date="1523611217343" expanded="true" signature="196:492" ph="SELECT sf_in... sf_indent" />
-            <marker date="1523611217343" expanded="true" signature="514:773" ph="SELECT * FRO... sf_indent" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/indent/addIndent.php" />
     <entry file="file://$PROJECT_DIR$/getShopCartSelect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -755,19 +705,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/indent/getIndentsByStatus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding>
+            <marker date="1523691154107" expanded="true" signature="196:492" ph="SELECT sf_in... sf_indent" />
+            <marker date="1523691154107" expanded="true" signature="514:773" ph="SELECT sf_in... sf_indent" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="110" column="7" lean-forward="false" selection-start-line="110" selection-start-column="7" selection-end-line="110" selection-end-column="7" />
+        <state relative-caret-position="432">
+          <caret line="114" column="36" lean-forward="false" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deleteShopCartComodityById.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <marker date="1523326608820" expanded="true" signature="140:192" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indent/getIndentByStatus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+          <folding>
+            <element signature="e#409#672#0#PHP" expanded="false" />
+            <element signature="e#584#672#0#PHP" expanded="false" />
+            <element signature="e#2572#3245#0#PHP" expanded="false" />
+            <element signature="e#3395#3449#0#PHP" expanded="false" />
+            <marker date="1523764946234" expanded="true" signature="503:576" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523764946234" expanded="true" signature="613:664" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523764946234" expanded="true" signature="1395:1508" ph="SELECT commo... sf_commodity" />
+            <marker date="1523764946234" expanded="true" signature="2649:2758" ph="SELECT commo... sf_commodity" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/indent/addCartIndent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="37" column="12" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="209">
+          <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+          <folding>
+            <marker date="1523764545343" expanded="true" signature="1599:1642" ph="DELETE FROM " />
+          </folding>
         </state>
       </provider>
     </entry>

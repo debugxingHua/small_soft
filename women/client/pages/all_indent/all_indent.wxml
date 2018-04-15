@@ -2,26 +2,29 @@
 
 <block wx:if="{{hasIndent}}">
   <view class='container'>
-    <view class='indent_container' wx:for="{{indentList}}" wx:key="" wx:for-item="item" wx:for-index="index">
+    <view class='indent_container' wx:for="{{indentList}}" wx:key="" wx:for-item="item1" wx:for-index="index">
       <view class='indent_one'>
         <view class='shopname'><text style='padding-left:10px;'>女人的衣服</text></view>
         <view class='status'>
-          <view wx:if="{{item.status == 1}}"><text>微信支付|待付款</text></view>
-          <view wx:if="{{item.status == 2}}"><text>微信支付|待收货</text></view>
-          <view wx:if="{{item.status == 3}}"><text>微信支付|交易成功</text></view>
-          <view wx:if="{{item.status == 4}}"><text>微信支付|交易关闭</text></view>
+          <view wx:if="{{item1.status == 1}}"><text>微信支付|待付款</text></view>
+          <view wx:if="{{item1.status == 2}}"><text>微信支付|待收货</text></view>
+          <view wx:if="{{item1.status == 3}}"><text>微信支付|交易成功</text></view>
+          <view wx:if="{{item1.status == 4}}"><text>微信支付|交易关闭</text></view>
         </view>
       </view>
-       <view class='commodity'>
-        <template is="commodity" data="{{item}}" />
+      <view class='commodity' wx:for="{{item1.commodity}}" wx:key="" wx:for-item="item2" wx:for-index="index">
+        <view wx:for="{{item2}}" wx:key="" wx:for-item="item" wx:for-index="index">
+          <template is="commodity" data="{{item}}" />
+        </view>
+        
       </view>
       <view class='money_ex'>
         <view class='ex'>
-          运费：￥<text style='color:red'>{{item.expressage}} </text>
-           总金额：￥<text style='color:red'>{{item.pay_money}} </text> 
+          运费：<text style='color:red'>{{item1.expressage}} 元</text>
+          总金额：<text style='color:red'>{{item1.pay_money}} 元</text>
         </view>
         <view class='all_money_pay'>
-          <text class='pay_money_text'>合计：{{item.money}} 元</text>
+          <text class='pay_money_text'>合计：{{item1.money}} 元</text>
         </view>
       </view>
       <view class='operation'>

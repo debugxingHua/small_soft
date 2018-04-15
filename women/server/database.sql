@@ -115,6 +115,7 @@ CREATE TABLE `sf_indent` (
   `date` VARCHAR (100) NOT NULL DEFAULT '',
   `count` VARCHAR (100) NOT NULL DEFAULT 1,
   `red_bag` INT(100) NOT NULL DEFAULT 0,
+  `expressage` INT(100) NOT NULL DEFAULT 0,
   `pay_money` VARCHAR (100) NOT NULL DEFAULT '',
   `money` VARCHAR (100) NOT NULL DEFAULT '',
   `leave_word_input` VARCHAR (1000) NOT NULL DEFAULT '',

@@ -4,9 +4,11 @@ require_once '../new_PDO.php';
 $date = date('Y/m/d h:i:s');
 $user_id = $_REQUEST['user_id'];
 $address_id = $_REQUEST['address_id'];
+$types = $_REQUEST['types'];
 $red_bag = $_REQUEST['red_bag'];
 $money = $_REQUEST['money'];
 $pay_money = $_REQUEST['pay_money'];
+$yf  = $_REQUEST['yf'];
 $leaveWordInput = $_REQUEST['leave_word_input'];
 //商品,array
 $commodity_list = json_decode($_REQUEST['commodity']);
@@ -33,11 +35,17 @@ try{
     $pdo = $new_pdo->pdo_object();
 
     //insert订单、
-    $sql = "INSERT sf_indent (address_id,commodity_id,user_id,color,size,date,count,red_bag,leave_word_input,money,pay_money) VALUES
+    $sql = "INSERT sf_indent (address_id,commodity_id,user_id,color,size,date,count,red_bag,leave_word_input,money,pay_money,expressage) VALUES
             ('{$address_id}','{$commodity_id}','{$user_id}','{$color}','{$size}','{$date}','{$count}','{$red_bag}','{$leaveWordInput}',
-            '{$money}','{$pay_money}') ";
-    $num = $pdo->exec($sql);
+            '{$money}','{$pay_money}','{$yf}') ";
+    $pdo->exec($sql);
     $lastId = $pdo->lastInsertId();
+    //判断从购物车来的，删除购物车里的
+    if($lastId > 0 && $types == 'cart'){
+        $sql_delete = "DELETE FROM sf_shop_cart WHERE selected='1'";
+        $pdo->exec($sql_delete);
+    }
+    unset($pdo);
     echo json_encode($lastId);
 }catch (PDOException $e){
     echo json_encode($e->getMessage());

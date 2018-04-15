@@ -75,7 +75,7 @@ Page({
     app.globalData.sc_array_select = this.data.sc_array_select;
     var money_all = this.data.money_all;
     wx.navigateTo({
-      url: '../payment/payment?money_all='+money_all
+      url: '../payment/payment?money_all='+money_all+'&types=cart'
     })
   },
   onShow: function (options) {

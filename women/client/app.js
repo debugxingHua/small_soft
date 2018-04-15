@@ -246,11 +246,14 @@ App({
       dataType: 'json',
       responseType: 'text',
       success: function (res) {
-        that.setData({
-          hasIndent:true,
-          indentList : res.data
-        });
-        // console.log('res:' + JSON.stringify(res.data));        
+        //判断返回参数
+        if(res.data.errMsg != '空'){
+          that.setData({
+            hasIndent: true,
+            indentList: res.data.indent
+          });
+        }
+        console.log(res.data);        
       },
       fail: function (res) {
         console.log(res.data);
