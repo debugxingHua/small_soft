@@ -16,9 +16,9 @@ try{
     //判断是全部订单，还是只获取对应status的订单
     if(isset($_REQUEST['status'])){
         $status = $_REQUEST['status'];
-        $sql_indent = "SELECT * FROM sf_indent WHERE user_id= '{$user_id}' && status='{$status}'";
+        $sql_indent = "SELECT * FROM sf_indent WHERE user_id= '{$user_id}' && status='{$status}' ORDER BY date DESC,status";
     }else{
-        $sql_indent = "SELECT * FROM sf_indent WHERE user_id= '{$user_id}'";
+        $sql_indent = "SELECT * FROM sf_indent WHERE user_id= '{$user_id}' ORDER BY date DESC,status";
     }
     $pdo_stmt = $pdo->query($sql_indent);
     $pdo_stmt->setFetchMode(PDO::FETCH_ASSOC);

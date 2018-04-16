@@ -34,14 +34,15 @@
           <view class='count'>
             <button size='mini' class='jian' catchtap='jian' data-count='{{item.count}}' data-id='{{item.sc_id}}' data-index="{{index}}">-</button>
             <view class='count_value' catchtap='inputCount_stop'>
-              <input type='number' style='background-color:#ccc;' value='{{item.count}}' data-id='{{item.sc_id}}' data-index="{{index}}" bindconfirm='inputCount'/>
+              <input type='number' value='{{item.count}}' data-id='{{item.sc_id}}' data-index="{{index}}" confirm-type='done' bindblur='inputCount'/>
             </view>
             <button size='mini' class='jia' catchtap='jia' data-count='{{item.count}}' data-id='{{item.sc_id}}' data-index="{{index}}">+</button>
           </view>
         </view>
       </view>
     </view>
-    <view class='footer'>
+  </view>
+  <view class='footer'>
       <view class='qx' wx:if="{{selected_all}}" bindtap="bindCheckAll">
         <icon  type="success" size="20"  />
         <text>已全选</text>
@@ -62,6 +63,5 @@
         </view>
       </view>
     </view>
-  </view>
 </block>
 <view style='height:60px;'></view>

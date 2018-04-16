@@ -253,8 +253,7 @@ App({
             hasIndent: true,
             indentList: res.data.indent
           });
-        }
-        console.log(res.data);        
+        }      
       },
       fail: function (res) {
         console.log(res.data);

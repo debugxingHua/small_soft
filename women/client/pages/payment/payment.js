@@ -64,7 +64,24 @@ Page({
         responseType: 'text',
         success: function (res) {
           console.log(res.data);
+          wx.showToast({
+            title: '订单生成成功'
+          });
+          wx.switchTab({
+            url: '../index/index',
+          })
           //生成订单，去付款
+          // wx.requestPayment({
+          //   'timeStamp': '',
+          //   'nonceStr': '',
+          //   'package': '',
+          //   'signType': 'MD5',
+          //   'paySign': '',
+          //   'success': function (res) {
+          //   },
+          //   'fail': function (res) {
+          //   }
+          // })
         },
         fail: function (res) {
           console.log(res.data);

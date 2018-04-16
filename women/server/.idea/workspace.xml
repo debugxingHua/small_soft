@@ -11,7 +11,27 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="getIndentByStatus.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/indent/getIndentByStatus.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="18" column="115" lean-forward="false" selection-start-line="18" selection-start-column="115" selection-end-line="18" selection-end-column="115" />
+              <folding>
+                <element signature="e#2624#3297#0#PHP" expanded="false" />
+                <element signature="e#3447#3501#0#PHP" expanded="false" />
+                <marker date="1523863641884" expanded="true" signature="503:576" ph="SELECT * FRO... sf_indent" />
+                <marker date="1523863641884" expanded="true" signature="503:602" ph="SELECT * FRO... sf_indent" />
+                <marker date="1523863641884" expanded="true" signature="639:690" ph="SELECT * FRO... sf_indent" />
+                <marker date="1523863641884" expanded="true" signature="639:716" ph="SELECT * FRO... sf_indent" />
+                <marker date="1523863641884" expanded="true" signature="1447:1560" ph="SELECT commo... sf_commodity" />
+                <marker date="1523863641884" expanded="true" signature="2701:2810" ph="SELECT commo... sf_commodity" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -50,9 +70,9 @@
         <option value="$PROJECT_DIR$/getShopCartSelect.php" />
         <option value="$PROJECT_DIR$/indent/getIndentsByStatus.php" />
         <option value="$PROJECT_DIR$/indent/addCartIndent.php" />
-        <option value="$PROJECT_DIR$/indent/getIndentByStatus.php" />
         <option value="$PROJECT_DIR$/database.sql" />
         <option value="$PROJECT_DIR$/addShopCart.php" />
+        <option value="$PROJECT_DIR$/indent/getIndentByStatus.php" />
       </list>
     </option>
   </component>
@@ -110,20 +130,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="indent" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="address" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -252,17 +258,18 @@
       <workItem from="1523590065894" duration="7879000" />
       <workItem from="1523668968333" duration="20246000" />
       <workItem from="1523755295665" duration="8281000" />
-      <workItem from="1523843057829" duration="3116000" />
+      <workItem from="1523843057829" duration="4189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96480000" />
+    <option name="totallyTimeSpent" value="97553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21041666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21041666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -298,6 +305,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1728">
           <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+          <folding>
+            <element signature="e#2624#3297#0#PHP" expanded="false" />
+            <element signature="e#3447#3501#0#PHP" expanded="false" />
+            <marker date="1523863641884" expanded="true" signature="503:576" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="503:602" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="639:690" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="639:716" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="1447:1560" ph="SELECT commo... sf_commodity" />
+            <marker date="1523863641884" expanded="true" signature="2701:2810" ph="SELECT commo... sf_commodity" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -331,6 +348,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding>
+            <element signature="e#2624#3297#0#PHP" expanded="false" />
+            <element signature="e#3447#3501#0#PHP" expanded="false" />
+            <marker date="1523863641884" expanded="true" signature="503:576" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="503:602" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="639:690" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="639:716" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="1447:1560" ph="SELECT commo... sf_commodity" />
+            <marker date="1523863641884" expanded="true" signature="2701:2810" ph="SELECT commo... sf_commodity" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -357,6 +384,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="e#2624#3297#0#PHP" expanded="false" />
+            <element signature="e#3447#3501#0#PHP" expanded="false" />
+            <marker date="1523863641884" expanded="true" signature="503:576" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="503:602" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="639:690" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="639:716" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="1447:1560" ph="SELECT commo... sf_commodity" />
+            <marker date="1523863641884" expanded="true" signature="2701:2810" ph="SELECT commo... sf_commodity" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -658,17 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indent/getIndentsByStatus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding>
-            <marker date="1523691154107" expanded="true" signature="196:492" ph="SELECT sf_in... sf_indent" />
-            <marker date="1523691154107" expanded="true" signature="514:773" ph="SELECT sf_in... sf_indent" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deleteShopCartComodityById.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -676,13 +702,6 @@
           <folding>
             <marker date="1523326608820" expanded="true" signature="140:192" ph="DELETE FROM " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indent/getIndentByStatus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -719,6 +738,31 @@
         <state relative-caret-position="594">
           <caret line="94" column="17" lean-forward="false" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indent/getIndentsByStatus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indent/getIndentByStatus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="115" lean-forward="false" selection-start-line="18" selection-start-column="115" selection-end-line="18" selection-end-column="115" />
+          <folding>
+            <element signature="e#2624#3297#0#PHP" expanded="false" />
+            <element signature="e#3447#3501#0#PHP" expanded="false" />
+            <marker date="1523863641884" expanded="true" signature="503:576" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="503:602" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="639:690" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="639:716" ph="SELECT * FRO... sf_indent" />
+            <marker date="1523863641884" expanded="true" signature="1447:1560" ph="SELECT commo... sf_commodity" />
+            <marker date="1523863641884" expanded="true" signature="2701:2810" ph="SELECT commo... sf_commodity" />
+          </folding>
         </state>
       </provider>
     </entry>

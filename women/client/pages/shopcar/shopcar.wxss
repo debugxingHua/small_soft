@@ -83,8 +83,8 @@
   float: left;
 }
 .count_value input{
-  line-height: 2.3em;
-  color: #fff;
+  /* line-height: 2.3em; */
+  color: #606060;
 }
 
 .delete {

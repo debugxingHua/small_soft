@@ -1,8 +1,7 @@
-Page {
-  background-color: #ccc;
-}
 .container {
   background-color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .user_info {
