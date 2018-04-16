@@ -1,4 +1,4 @@
-<import src="../template/picker_date/template.wxml" />
+
 <!-- 地址列表 -->
 <view class='container'>
 <block wx:for="{{addressList}}" wx:key="" wx:for-item="item" wx:if="{{hasAddress}}" wx:for-index="index">

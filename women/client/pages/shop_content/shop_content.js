@@ -5,6 +5,55 @@ Page({
    * 页面的初始数据
    */
   data: {
+    footer:true,
+    count_value:1,
+    suoyin:1
+  },
+  // 设置样式
+  bindSelected:function(e){
+    console.log(e);
+  },
+  count_vlue_change:function(e){
+    this.setData({
+      count_value: e.detail.value
+    });
+  },
+  count_jian:function(e){
+    var count = Number(this.data.count_value);
+    if(count >= 2){
+      count--;
+      this.setData({
+        count_value:count
+      });
+    }
+  },
+  count_jia: function (e) {
+    var count = Number(this.data.count_value);
+    count++;
+    this.setData({
+      count_value: count
+    });
+  },
+  radioSizeChange: function (e) {
+    this.setData({
+      size_selected: e.detail.value
+    });
+  },
+  radioColorChange: function (e) {
+    this.setData({
+      color_selected: e.detail.value
+    });
+  },
+  CountChange: function (e) {
+    // console.log('Count', e.detail.value)
+    this.setData({
+      count_value: e.detail.value
+    });
+  },
+  setParamFalse:function(e){
+    this.setData({
+      footer:true
+    });
   },
   tosy: function (event){
     wx.switchTab({
@@ -17,12 +66,21 @@ Page({
     })
   },
   addCart:function(event){
+    this.setData({
+      footer: true
+    });
     var commodity_id = event.currentTarget.dataset.id;
-    //规格应该做成活动的，最后搞这个。
-    var color = 'red22';
-    var size = '11';
-    var count = 1;
+    var color = this.data.color_selected;
+    var size = this.data.size_selected;
+    var count = this.data.count_value;
     app.addCart(commodity_id,color, size, count);
+  },
+  toAddCartOrBuy: function (event) {
+    var that = this;
+    // console.log(that.data);
+    that.setData({
+      footer:false
+    });
   },
   //去添加订单
   buy: function (event){
@@ -32,9 +90,9 @@ Page({
     );
     app.globalData.sc_array_select = sc_array_select;
     //此处设置参数
-    app.globalData.sc_array_select[0].color = 'red';
-    app.globalData.sc_array_select[0].size = '30cm';
-    app.globalData.sc_array_select[0].count = 1;
+    app.globalData.sc_array_select[0].color = this.data.color_selected;
+    app.globalData.sc_array_select[0].size = this.data.size_selected;
+    app.globalData.sc_array_select[0].count = this.data.count_value;
     //算出金额、运费、总金额、
     var money_now = Number(this.data.commodity_data.money_now);
     var count = Number(app.globalData.sc_array_select[0].count);
@@ -60,8 +118,12 @@ Page({
       },
       method: 'GET',
       success: function (result) {
+        result.data.size = result.data.size.split(',');
+        result.data.color = result.data.color.split(',');
         that.setData({
-          commodity_data: result.data
+          commodity_data: result.data,
+          size_selected: result.data.size[0],
+          color_selected: result.data.color[0]
         });
       }
     });

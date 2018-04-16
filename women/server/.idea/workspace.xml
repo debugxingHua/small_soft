@@ -11,12 +11,16 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>$</find>
+      <find>10cm,20cm,30cm,40cm,50cm</find>
     </findStrings>
+    <replaceStrings>
+      <replace>S,M,L,XL,2Xl</replace>
+    </replaceStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -36,7 +40,6 @@
         <option value="$PROJECT_DIR$/wxBizDataCrypt.php" />
         <option value="$PROJECT_DIR$/User.php" />
         <option value="$PROJECT_DIR$/updateTimeForUser.php" />
-        <option value="$PROJECT_DIR$/addShopCart.php" />
         <option value="$PROJECT_DIR$/saveUserByLoginCode.php" />
         <option value="$PROJECT_DIR$/saveUser.php" />
         <option value="$PROJECT_DIR$/deleteShopCartComodityById.php" />
@@ -46,9 +49,10 @@
         <option value="$PROJECT_DIR$/indent/addIndent.php" />
         <option value="$PROJECT_DIR$/getShopCartSelect.php" />
         <option value="$PROJECT_DIR$/indent/getIndentsByStatus.php" />
-        <option value="$PROJECT_DIR$/database.sql" />
         <option value="$PROJECT_DIR$/indent/addCartIndent.php" />
         <option value="$PROJECT_DIR$/indent/getIndentByStatus.php" />
+        <option value="$PROJECT_DIR$/database.sql" />
+        <option value="$PROJECT_DIR$/addShopCart.php" />
       </list>
     </option>
   </component>
@@ -247,12 +251,13 @@
       <workItem from="1523581517407" duration="2088000" />
       <workItem from="1523590065894" duration="7879000" />
       <workItem from="1523668968333" duration="20246000" />
-      <workItem from="1523755295665" duration="7584000" />
+      <workItem from="1523755295665" duration="8281000" />
+      <workItem from="1523843057829" duration="3116000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92667000" />
+    <option name="totallyTimeSpent" value="96480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
@@ -293,16 +298,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1728">
           <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
-          <folding>
-            <element signature="e#409#672#0#PHP" expanded="false" />
-            <element signature="e#584#672#0#PHP" expanded="false" />
-            <element signature="e#2572#3245#0#PHP" expanded="false" />
-            <element signature="e#3395#3449#0#PHP" expanded="false" />
-            <marker date="1523764946234" expanded="true" signature="503:576" ph="SELECT * FRO... sf_indent" />
-            <marker date="1523764946234" expanded="true" signature="613:664" ph="SELECT * FRO... sf_indent" />
-            <marker date="1523764946234" expanded="true" signature="1395:1508" ph="SELECT commo... sf_commodity" />
-            <marker date="1523764946234" expanded="true" signature="2649:2758" ph="SELECT commo... sf_commodity" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -310,7 +305,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -337,16 +331,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding>
-            <element signature="e#409#672#0#PHP" expanded="false" />
-            <element signature="e#584#672#0#PHP" expanded="false" />
-            <element signature="e#2572#3245#0#PHP" expanded="false" />
-            <element signature="e#3395#3449#0#PHP" expanded="false" />
-            <marker date="1523764946234" expanded="true" signature="503:576" ph="SELECT * FRO... sf_indent" />
-            <marker date="1523764946234" expanded="true" signature="613:664" ph="SELECT * FRO... sf_indent" />
-            <marker date="1523764946234" expanded="true" signature="1395:1508" ph="SELECT commo... sf_commodity" />
-            <marker date="1523764946234" expanded="true" signature="2649:2758" ph="SELECT commo... sf_commodity" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -373,16 +357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding>
-            <element signature="e#409#672#0#PHP" expanded="false" />
-            <element signature="e#584#672#0#PHP" expanded="false" />
-            <element signature="e#2572#3245#0#PHP" expanded="false" />
-            <element signature="e#3395#3449#0#PHP" expanded="false" />
-            <marker date="1523764946234" expanded="true" signature="503:576" ph="SELECT * FRO... sf_indent" />
-            <marker date="1523764946234" expanded="true" signature="613:664" ph="SELECT * FRO... sf_indent" />
-            <marker date="1523764946234" expanded="true" signature="1395:1508" ph="SELECT commo... sf_commodity" />
-            <marker date="1523764946234" expanded="true" signature="2649:2758" ph="SELECT commo... sf_commodity" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -400,8 +374,8 @@
         <state relative-caret-position="1593">
           <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
           <folding>
-            <marker date="1523265769461" expanded="true" signature="371:458" ph="SELECT * FRO... sf_shop_cart" />
-            <marker date="1523265769461" expanded="true" signature="3015:3064" ph="UPDATE sf_sh... " />
+            <marker date="1523861207439" expanded="true" signature="371:458" ph="SELECT * FRO... sf_shop_cart" />
+            <marker date="1523861207439" expanded="true" signature="3015:3064" ph="UPDATE sf_sh... " />
           </folding>
         </state>
       </provider>
@@ -430,8 +404,8 @@
         <state relative-caret-position="756">
           <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
           <folding>
-            <marker date="1523265769461" expanded="true" signature="371:458" ph="SELECT * FRO... sf_shop_cart" />
-            <marker date="1523265769461" expanded="true" signature="3015:3064" ph="UPDATE sf_sh... " />
+            <marker date="1523861207439" expanded="true" signature="371:458" ph="SELECT * FRO... sf_shop_cart" />
+            <marker date="1523861207439" expanded="true" signature="3015:3064" ph="UPDATE sf_sh... " />
           </folding>
         </state>
       </provider>
@@ -462,8 +436,8 @@
         <state relative-caret-position="1728">
           <caret line="64" column="3" lean-forward="true" selection-start-line="64" selection-start-column="3" selection-end-line="64" selection-end-column="3" />
           <folding>
-            <marker date="1523265769461" expanded="true" signature="371:458" ph="SELECT * FRO... sf_shop_cart" />
-            <marker date="1523265769461" expanded="true" signature="3015:3064" ph="UPDATE sf_sh... " />
+            <marker date="1523861207439" expanded="true" signature="371:458" ph="SELECT * FRO... sf_shop_cart" />
+            <marker date="1523861207439" expanded="true" signature="3015:3064" ph="UPDATE sf_sh... " />
           </folding>
         </state>
       </provider>
@@ -662,27 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addShopCart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-          <folding>
-            <marker date="1523265769461" expanded="true" signature="371:458" ph="SELECT * FRO... sf_shop_cart" />
-            <marker date="1523265769461" expanded="true" signature="3015:3064" ph="UPDATE sf_sh... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getCommoditySelect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <marker date="1523176247160" expanded="true" signature="152:178" ph="SELECT * FRO... sf_commodity" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getCommodityById.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -716,14 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="114" column="36" lean-forward="false" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deleteShopCartComodityById.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -738,16 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-          <folding>
-            <element signature="e#409#672#0#PHP" expanded="false" />
-            <element signature="e#584#672#0#PHP" expanded="false" />
-            <element signature="e#2572#3245#0#PHP" expanded="false" />
-            <element signature="e#3395#3449#0#PHP" expanded="false" />
-            <marker date="1523764946234" expanded="true" signature="503:576" ph="SELECT * FRO... sf_indent" />
-            <marker date="1523764946234" expanded="true" signature="613:664" ph="SELECT * FRO... sf_indent" />
-            <marker date="1523764946234" expanded="true" signature="1395:1508" ph="SELECT commo... sf_commodity" />
-            <marker date="1523764946234" expanded="true" signature="2649:2758" ph="SELECT commo... sf_commodity" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -755,9 +690,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getCommoditySelect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
           <folding>
-            <marker date="1523764545343" expanded="true" signature="1599:1642" ph="DELETE FROM " />
+            <marker date="1523176247160" expanded="true" signature="152:178" ph="SELECT * FRO... sf_commodity" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addShopCart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="87" column="16" lean-forward="true" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+          <folding>
+            <marker date="1523861207439" expanded="true" signature="371:458" ph="SELECT * FRO... sf_shop_cart" />
+            <marker date="1523861207439" expanded="true" signature="3015:3064" ph="UPDATE sf_sh... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="94" column="17" lean-forward="false" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

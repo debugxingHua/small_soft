@@ -23,9 +23,9 @@
   </view>
   <view class='specification'>
     <!-- 规格尺码 -->
-    <text>规格：</text>
-    <text style='color:#666;'>颜色:{{commodity_data.color}}、尺码:{{commodity_data.size}}</text>
-    <text style='float:right;margin-right:2px;'>></text>
+    <text>规格：点击选择</text>
+    <!-- <text style='color:#666;'>颜色:{{commodity_data.color}}、尺码:{{commodity_data.size}}</text> -->
+    <!-- <text style='float:right;margin-right:2px;'>></text> -->
   </view>
   <view class='guarantee'>
     <!-- 保障 -->
@@ -36,7 +36,6 @@
     <text>该商品由xxx供货并提供发货</text>
   </view>
 </view>
-
 <!-- 商品详情及推荐按钮组，锚点实现 -->
 <view class='buttons'>
   <text class='btn1' style='color:red;'>商品详情</text>
@@ -51,7 +50,7 @@
     <text>End</text>
   </view> 
 <!-- 自定义下部导航 -->
-<view class='footer'>
+<view class='footer' wx:if="{{footer}}">
   <view class='tabar_bottom'>
     <view class='sy' bindtap='tosy'>
       <text>首页</text>
@@ -59,11 +58,68 @@
     <view class='cart' bindtap='toCart'>
       <text>购物车</text>
     </view>
-    <view class='addCart' bindtap='addCart' data-id='{{commodity_data.commodity_id}}'>
+    <view class='addCart' bindtap='toAddCartOrBuy'>
       <text>加入购物车</text>
     </view>
-    <view class='buy' bindtap='buy'>
+    <view class='buy' bindtap='toAddCartOrBuy'>
       <text>立即购买</text>
+    </view>
+  </view>
+</view>
+<!-- 参数选择 -->
+<view wx:else>
+  <view class='param_contanier'>
+    <view class='param_top' bindtap='setParamFalse'></view>
+    <view class='param_bottom'>
+      <view class='param_img'>
+          <image class='param_img_bq' src='{{commodity_data.img_url}}'></image>
+          <view class='param_img_text1'>
+            <text style='color:red;'>￥ {{commodity_data.money_now}}</text>
+          </view>
+          <view class='param_img_text2'>
+            <text>{{color_selected}} / {{size_selected}}</text>
+          </view>
+      </view>
+      <view class='param_color'>
+        <text class='param-title'>颜色</text>
+        <view class='param_radio'>
+          <radio-group class="radio-group" bindchange="radioColorChange">
+            <label class="radio" wx:for="{{commodity_data.color}}" wx:key="" wx:for-item="item" wx:for-index="index"  bindtap='bindSelected'>
+              <radio class="{{checked == true? 'radio_checked':''}}" value="{{item}}" hidden='true'></radio>
+                <text>{{item}}</text>
+            </label>
+          </radio-group>
+        </view>
+      </view>
+      <view class='param_size'>
+        <text  class='param-title'>尺寸</text>
+        <view class='param_radio'>
+          <radio-group class="radio-group" bindchange="radioSizeChange">
+            <label class="radio" wx:for="{{commodity_data.size}}" wx:key="" wx:for-item="item" wx:for-index="index">
+              <radio value="{{item}}" checked="{{item.checked}}" hidden='true'></radio>
+              <text>{{item}}</text>
+            </label>
+          </radio-group>
+        </view>
+      </view>
+      <view class='param_count'>
+        <text style='padding-left:10px;padding-top:4px;'>购买数量</text>
+        <view class='param_count_operation'>
+          <view class='param_count_jian' bindtap='count_jian'>
+            <text> - </text>
+          </view>
+          <view class='param_count_input'>
+            <input type='text' bindinput='count_vlue_change' value='{{count_value}}'/>            
+          </view>
+          <view class='param_count_jia'>
+            <text bindtap='count_jia'> + </text>            
+          </view>
+        </view>
+      </view>
+      <view class='param_btn'>
+        <view class='param_cart' style='background-color:#9966ff;' bindtap='addCart' data-id='{{commodity_data.commodity_id}}'>加入购物车</view>
+        <view class='param_buy' style='background-color:red;' bindtap='buy' >立即购买</view>
+      </view>
     </view>
   </view>
 </view>

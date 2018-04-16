@@ -52,6 +52,7 @@ App({
   },
   // 添加购物车
   addCart: function (commodity_id, color, size, count){
+    console.log(commodity_id, color, size, count);
     var user_id = this.globalData.user_id; 
     wx.request({
       url: url_list.url_list.addShopCart,
@@ -67,8 +68,8 @@ App({
         count: count
       },
       success: function (res) {
-        // console.log(res.data);
-        if (res.data != null) {
+        console.log(res.data);
+        if (res.data.num != 0) {
           wx.showToast({
             title: '成功',
             icon: 'succes',

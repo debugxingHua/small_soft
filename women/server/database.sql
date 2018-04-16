@@ -27,19 +27,19 @@ CREATE TABLE `sf_commodity` (
   `money_old` varchar(100) NOT NULL DEFAULT '',
   `expressage` INT (100) NOT NULL DEFAULT 0,
   `sales` INT (100) NOT NULL DEFAULT 0,
-  `color` varchar(100) NOT NULL DEFAULT '',
-  `size` varchar(100) NOT NULL DEFAULT '',
+  `color` varchar(1000) NOT NULL DEFAULT '',
+  `size` varchar(1000) NOT NULL DEFAULT '',
   `order` INT(100) NOT NULL DEFAULT 0,
   `status` INT(100) NOT NULL DEFAULT 1,
   PRIMARY KEY (`commodity_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
-INSERT INTO `sf_commodity` VALUES(1,'你所不知道的红酒','http://f10.baidu.com/it/u=121654667,1482133440&fm=72','199','599',0,1000,'红色','50cm',0,1);
-INSERT INTO `sf_commodity` VALUES(2,'电饭锅电饭锅水','http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg','99','499',1,1000,'红色','50cm',0,1);
-INSERT INTO `sf_commodity` VALUES(3,'第三方拉拉队首付','http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=27&gp=0.jpg','199','699',8,1000,'红色','50cm',0,1);
-INSERT INTO `sf_commodity` VALUES(4,'水电费是否对啥的水电费大法','http://f10.baidu.com/it/u=121654667,1482133440&fm=72','199','599',0,1000,'红色','50cm',0,1);
-INSERT INTO `sf_commodity` VALUES(5,'手动阀手动阀士大夫撒发达手动阀是的发送到','http://f10.baidu.com/it/u=121654667,1482133440&fm=72','699','799',7,1000,'红色','50cm',0,1);
-INSERT INTO `sf_commodity` VALUES(6,'飞手动阀发斯蒂芬手动阀打死废物egg','http://f10.baidu.com/it/u=121654667,1482133440&fm=72','199','599',2,1000,'红色','50cm',0,1);
+INSERT INTO `sf_commodity` VALUES(1,'你所不知道的红酒','http://f10.baidu.com/it/u=121654667,1482133440&fm=72','199','599',0,1000,'红色,白色,屎黄色,透明色','S,M,L,XL,2Xl',0,1);
+INSERT INTO `sf_commodity` VALUES(2,'电饭锅电饭锅水','http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=26&gp=0.jpg','99','499',1,1000,'红色,白色,屎黄色,透明色','S,M,L,XL,2Xl',0,1);
+INSERT INTO `sf_commodity` VALUES(3,'第三方拉拉队首付','http://img4.imgtn.bdimg.com/it/u=349345436,3394162868&fm=27&gp=0.jpg','199','699',8,1000,'红色,白色,屎黄色,透明色','S,M,L,XL,2Xl',0,1);
+INSERT INTO `sf_commodity` VALUES(4,'水电费是否对啥的水电费大法','http://f10.baidu.com/it/u=121654667,1482133440&fm=72','199','599',0,1000,'红色,白色,屎黄色,透明色','S,M,L,XL,2Xl',0,1);
+INSERT INTO `sf_commodity` VALUES(5,'手动阀手动阀士大夫撒发达手动阀是的发送到','http://f10.baidu.com/it/u=121654667,1482133440&fm=72','699','799',7,1000,'红色,白色,屎黄色,透明色','S,M,L,XL,2Xl',0,1);
+INSERT INTO `sf_commodity` VALUES(6,'飞手动阀发斯蒂芬手动阀打死废物egg','http://f10.baidu.com/it/u=121654667,1482133440&fm=72','199','599',2,1000,'红色,白色,屎黄色,透明色','S,M,L,XL,2Xl',0,1);
 
 --  创建商品详情图片表
 --  图片详情列表：关联商品commodity_id、img_url、

@@ -1,0 +1,81 @@
+.param_contanier {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.param_top {
+  width: 100%;
+  height: 40%;
+  background-color: #666666;
+  opacity:0.4;
+}
+.param_bottom {
+  width: 100%;
+  height: 60%;
+  background-color: #fff;
+}
+
+.param_btn,.param_count,.param_color,.param_size,.param_img {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  border: 1px red;
+}
+/* 最下面的按钮组 */
+.param_btn {
+  position:fixed;  
+  bottom: 0;  
+  text-align: center;
+}
+.param_cart,.param_buy {
+  width: 50%;
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* 图片 */
+.param_img {
+  border-bottom: 1px solid #ccc;
+}
+.param_img_bq {
+  position: relative;
+  top: -40px;
+  left: 30px;
+  width: 90px;
+  height: 90px;
+}
+.param_img_text {
+  position: relative;
+  top: -50px; 
+  left: 80px;
+}
+
+/* 尺寸 */
+.param_size {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.param_radio {
+  margin-left: 15px;
+  flex-direction: row;
+}
+.radio-group {
+  margin-left: 3px;
+}
+
+/* 数量组 */
+.param_count {
+  position:absolute;
+  bottom: 80;
+}
+.param_count_operation {
+  float: right;
+  padding-right: 15px;
+}
+.param_count_operation text{
+  padding: 2px;
+  border: 1px solid #ccc;
+}

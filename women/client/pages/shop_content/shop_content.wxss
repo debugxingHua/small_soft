@@ -1,6 +1,7 @@
 Page {
-  background-color: #ccc; 
+  background-color: #E8E8E8; 
 }
+
 .container {
   background-color: #fff;
 }
@@ -68,7 +69,7 @@ Page {
 .tj {
   width: 100%;
   text-align: center;
-  margin-bottom: 60px; 
+  margin-bottom: 60px;
 }
 
 .footer {
@@ -91,7 +92,7 @@ Page {
   padding-bottom: 10px;
 }
 .sy {
-  background-color:#999;
+  background-color:#E8E8E8;
   width: 20%;
 }
 
@@ -107,4 +108,138 @@ Page {
 .buy{
   background-color:red;
   width: 30%;
+}
+
+
+/* parameter */
+.param_contanier {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.param_top {
+  width: 100%;
+  height: 40%;
+  background-color: #666666;
+  opacity:0.4;
+}
+.param_bottom {
+  width: 100%;
+  height: 60%;
+  background-color: #fff;
+  font-size: 8px;
+  font-family: sans-serif;
+}
+
+ .param_count,.param_color,.param_size,.param_img {
+  background-color: #fff;
+  width: 100%;
+  height: 12%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+} 
+/* 最下面的按钮组 */
+.param_btn {
+  width: 100%;
+  position:fixed;
+  bottom: 0;
+  text-align: center;
+}
+.param_cart,.param_buy {
+  width: 50%;
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* 图片 */
+.param_img {
+  border-bottom: 1px solid #ccc;
+}
+.param_img_bq {
+  position: relative;
+  top: -40px;
+  left: 30px;
+  width: 90px;
+  height: 90px;
+}
+.param_img_text1 {
+  position: relative;
+  top: -92px; 
+  left: 175px;
+}
+.param_img_text2 {
+   position: relative;
+  top: -87px; 
+  left: 172px;
+}
+
+/* 尺寸 */
+.param_size {
+  border-bottom: 1px solid #ccc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* 颜色 */
+.param_color {
+  border-bottom: 1px solid #ccc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.param-title {
+  margin-left: 10px;
+}
+/* 单选框 */
+.param_radio {
+  margin-top: 5px;
+  flex-direction: row;
+}
+.radio-group {
+  margin-left: 3px;
+}
+.param_radio text{
+  margin-left: 10px;
+  padding:2px 10px;
+  background-color: #E8E8E8;
+  color: #999;
+}
+.radio_checked {
+  color: red;
+  border-bottom: 2px solid red; 
+}
+
+
+/* 数量组 */
+.param_count {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position:absolute;
+  bottom: 80;
+}
+.param_count_operation {
+  width: 30%;
+  float: right;
+  padding-right: 15px;
+}
+.param_count_jian {
+  width: 30%;
+  float: left;
+}
+.param_count_jia {
+  width: 30%;
+  float: left; 
+}
+.param_count_input {
+  width: 40%;
+  float: left;
+  text-align: center;
+}
+ .param_count_operation text{
+  width: 10px;
+  padding:2px 10px;
+  background-color: #E8E8E8;
 }
