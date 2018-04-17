@@ -16,7 +16,6 @@
         <view wx:for="{{item2}}" wx:key="" wx:for-item="item" wx:for-index="index">
           <template is="commodity" data="{{item}}" />
         </view>
-        
       </view>
       <view class='money_ex'>
         <view class='ex'>

@@ -13,7 +13,7 @@
   <view class='sales' bindtap='addFavorite' data-id='{{commodity_data.commodity_id}}'>
     <!-- 销量 -->
     <text>销量: {{commodity_data.sales}}</text>
-    <text class='like'>☆</text>
+    <text class='like'>☆收藏</text>
   </view>
   <view class='money'>
     <!-- 价格 -->

@@ -1,5 +1,5 @@
 <?php
-require_once 'new_PDO.php';
+require_once '../common/new_PDO.php';
 
 try{
     //新建pdo对象

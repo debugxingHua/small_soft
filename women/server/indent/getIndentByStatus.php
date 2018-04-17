@@ -1,5 +1,5 @@
 <?php
-require_once "../new_PDO.php";
+require_once "../common/new_PDO.php";
 $user_id = $_REQUEST['user_id'];
 //结果：订单+对应的color、size、商品信息
 $result_all = array();

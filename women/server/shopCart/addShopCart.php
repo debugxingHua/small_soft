@@ -1,5 +1,5 @@
 <?php
-require_once 'new_PDO.php';
+require_once '../common/new_PDO.php';
 
 //获取请求的id
 $user_id = $_REQUEST['user_id'];

@@ -1,6 +1,6 @@
 <?php
-require_once 'User.php';
-require_once 'new_PDO.php';
+require_once '../common/User.php';
+require_once '../common/new_PDO.php';
 
 $user_object = new User();
 $appId = 'wxc9713edb30ef6b8e';//小程序id

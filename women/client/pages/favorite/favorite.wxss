@@ -43,13 +43,13 @@
 .td {
   /* border: 1px solid #f33; */
   padding: 10rpx auto;
-}
-.title {
-  padding-left: 10rpx;
-  width: 70%;
+  width: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.title {
+  padding-left: 10rpx;
 }
 .delete {
   padding-right: 10rpx;

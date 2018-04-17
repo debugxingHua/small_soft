@@ -273,6 +273,10 @@ App({
             hasFavorite: true,
             favoriteList: res.data.result
           });
+        }else{
+          that.setData({
+            hasFavorite: false
+          });
         }
       }
     })

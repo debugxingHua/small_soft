@@ -10,31 +10,28 @@ var config = {
   // 上传图片接口
   uploadUrl: `${host}/upload`,
 
-  getSwiperSelect: `${host}/getSwiperSelect.php`,
-  getCommoditySelect: `${host}/getCommoditySelect.php`,
-  // 获取购物车信息，和getCart区分靠传入rt参数。
-  getCart: `${host}/getShopCartSelect.php`,
-  // 添加购物车
-  addShopCart: `${host}/addShopCart.php`,
-  // 更新购物车商品数量
-  updateCartCount: `${host}/updateShopCartCountBySCId.php`,
-  // 更新购物车选中状态
-  updateCartSelected: `${host}/updateShopCartSelectedBySCId.php`,
-  // 更新全选状态
-  updateCartAllSelected: `${host}/updateShopCartAllSelectedBySCId.php`,
-  deleteShopCartComodityById: `${host}/deleteShopCartComodityById.php`, 
-  getCommodityById: `${host}/getCommodityById.php`,
-  getCommodityImgById: `${host}/getCommodityImgById.php`,
-  getUserInfo: `${host}/getUserInfo.php`,
-  saveUser: `${host}/saveUser.php`,
+  getSwiperSelect: `${host}/swiper/getSwiperSelect.php`,
+  // 购物车
+  getCart: `${host}/shopCart/getShopCartSelect.php`,
+  addShopCart: `${host}/shopCart/addShopCart.php`,
+  updateCartCount: `${host}/shopCart/updateShopCartCountBySCId.php`,
+  updateCartSelected: `${host}/shopCart/updateShopCartSelectedBySCId.php`,
+  updateCartAllSelected: `${host}/shopCart/updateShopCartAllSelectedBySCId.php`,
+  deleteShopCartComodityById: `${host}/shopCart/deleteShopCartComodityById.php`,
+  //商品
+  getCommodityById: `${host}/commodity/getCommodityById.php`,
+  getCommoditySelect: `${host}/commodity/getCommoditySelect.php`,  
+  getCommodityImgById: `${host}/commodity/getCommodityImgById.php`,
+  getUserInfo: `${host}/user/getUserInfo.php`,
+  saveUser: `${host}/user/saveUser.php`,
   //地址
   addAddress: `${host}/address/addAddress.php`, 
   getAddressListByUserId: `${host}/address/getAddressListByUserId.php`,
 
   //订单
-  addIndent: `${host}/indent/addIndent.php`,
   getIndentByStatus: `${host}/indent/getIndentByStatus.php`,
   addCartIndent: `${host}/indent/addCartIndent.php`,
+  
   //收藏
   addFavorite: `${host}/favorite/addFavorite.php`,
   getFavorite: `${host}/favorite/getFavorite.php`, 

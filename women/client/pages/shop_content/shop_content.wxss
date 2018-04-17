@@ -25,6 +25,7 @@ Page {
 .like {
   float: right;
   padding-right: 10px;
+  color: #ccc;
 }
 /* 价格 */
 .money{

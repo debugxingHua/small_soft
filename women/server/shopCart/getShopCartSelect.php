@@ -1,5 +1,5 @@
 <?php
-require_once 'new_PDO.php';
+require_once '../common/new_PDO.php';
 
 try{
 //    var_dump($_REQUEST['user_id']);
