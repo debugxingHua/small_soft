@@ -1,4 +1,5 @@
 <!-- 商品滑动图 -->
+<view style='margin-left: 10px;margin-right: 10px;'>
 <swiper indicator-dots='true' autoplay='true' interval='5000'>
   <swiper-item wx:for="{{swiper_img}}" wx:for-item="item" wx:key="">
     <image src='{{item.img_url}}'></image>
@@ -9,7 +10,7 @@
     <!-- 标题 -->
     <text>{{commodity_data.title}}</text>
   </view>
-  <view class='sales'>
+  <view class='sales' bindtap='addFavorite' data-id='{{commodity_data.commodity_id}}'>
     <!-- 销量 -->
     <text>销量: {{commodity_data.sales}}</text>
     <text class='like'>☆</text>
@@ -122,4 +123,5 @@
       </view>
     </view>
   </view>
+</view>
 </view>

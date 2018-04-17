@@ -15,6 +15,16 @@ CREATE TABLE `sf_user` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
+--  创建收藏表
+--  user_id、商品id
+DROP TABLE IF EXISTS `sf_favorite`;
+CREATE TABLE `sf_favorite` (
+  `favorite_id` mediumint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` SMALLINT (6) NOT NULL DEFAULT 0,
+  `commodity_id` SMALLINT (6) NOT NULL DEFAULT 0,
+  `date` varchar(100) NOT NULL DEFAULT '',
+  PRIMARY KEY (`favorite_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --  创建商品表
 --  id、标题、主图url、现价、旧价、状态

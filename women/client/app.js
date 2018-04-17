@@ -3,6 +3,7 @@ var url_list = require('./config.js');
 App({
   globalData: {
     user_id:'',
+    shop_name:'女人的衣服',
     pbl_datas : '',
     commodity : '',
     shop_cart_count: 0,
@@ -257,6 +258,22 @@ App({
       },
       fail: function (res) {
         console.log(res.data);
+      }
+    })
+  },
+  getFavorite:function(that){
+    wx.request({
+      url: url_list.url_list.getFavorite,
+      data: {
+        user_id: this.globalData.user_id
+      },
+      success: function (res) {
+        if (res.data.errMsg == 'ok' && res.data.result.length !=0){
+          that.setData({
+            hasFavorite: true,
+            favoriteList: res.data.result
+          });
+        }
       }
     })
   }

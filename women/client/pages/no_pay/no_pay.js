@@ -8,7 +8,11 @@ Page({
   data: {
     hasIndent: false
   },
-
+  toSY: function (event) {
+    wx.switchTab({
+      url: '../index/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

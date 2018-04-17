@@ -35,8 +35,10 @@ var config = {
   addIndent: `${host}/indent/addIndent.php`,
   getIndentByStatus: `${host}/indent/getIndentByStatus.php`,
   addCartIndent: `${host}/indent/addCartIndent.php`,
-  addIndent3: `${host}/indent/addIndent.php`
-  
+  //收藏
+  addFavorite: `${host}/favorite/addFavorite.php`,
+  getFavorite: `${host}/favorite/getFavorite.php`, 
+  deleteFavorite: `${host}/favorite/deleteFavorite.php`,
 };
 
 module.exports = {

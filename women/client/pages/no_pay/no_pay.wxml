@@ -35,7 +35,7 @@
   </view>
 </block>
 <block wx:else>
-  <view>
-    <text>暂无订单</text>
+  <view style='width:100%;margin-top:180px;text-align:center;'>
+    <button style='width:50%;' bindtap='toSY'>去首页看看</button>
   </view>
 </block>

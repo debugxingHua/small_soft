@@ -13,6 +13,23 @@ Page({
   bindSelected:function(e){
     console.log(e);
   },
+  addFavorite:function(e){
+    var commodity_id = e.currentTarget.dataset.id;
+    wx.request({
+      url: url_list.url_list.addFavorite,
+      data:{
+        commodity_id: commodity_id,
+        user_id: app.globalData.user_id
+      },
+      success:function(res){
+        if(res.data){
+          wx.showToast({
+            title: res.data.errMsg,
+          })
+        }
+      }
+    })
+  },
   count_vlue_change:function(e){
     this.setData({
       count_value: e.detail.value

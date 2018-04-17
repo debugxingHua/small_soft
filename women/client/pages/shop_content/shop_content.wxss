@@ -1,5 +1,5 @@
 Page {
-  background-color: #E8E8E8; 
+  background-color: #E8E8E8;
 }
 
 .container {
@@ -10,6 +10,7 @@ Page {
   font-size: 18px;
   width: 97%;
   height: 30px;
+  padding-left: 2px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

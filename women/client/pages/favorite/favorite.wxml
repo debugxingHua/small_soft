@@ -1,2 +1,40 @@
-<!--pages/favorite/favorite.wxml-->
-<text>pages/favorite/favorite.wxml</text>
+
+<view class="container"  >
+  <block wx:if='{{hasFavorite}}'>
+    <view class='shop_name'>{{shop_name}}</view>
+    <view class='container' wx:for="{{favoriteList}}" wx:key="" wx:for-item="item" wx:for-index='index'>
+      <view class='shop_content'>
+        <!-- 商品图 -->
+        <view class='img_container'>
+          <image  class='img' src='{{item.img_url}}'></image>
+        </view>
+        <!-- 商品内容 -->
+        <view class='content_container' catchtap='toContent' data-id='{{item.commodity_id}}'>
+          <!-- 标题及删除 -->
+          <view class='td'>
+            <text class='title'>{{item.title}}</text>
+          </view>
+          <!-- 尺寸及颜色 -->
+          <view class='sc'>
+            <text class='sc_text'>尺寸：{{item.size[0]}} 颜色：{{item.color[0]}}</text>
+            <text class='delete' catchtap='delete_favorite' data-id='{{item.favorite_id}}'>移除</text>           
+          </view>
+          <!-- 价格及数量 -->
+          <view class='mc'>
+            <view class='money'>
+              <text>￥{{item.money_now}}</text>
+            </view>
+            <view class='date'>
+              <text>{{item.date}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view style='width:100%;margin-top:180px;text-align:center;'>
+      <button style='width:50%;' bindtap='toSY'>去首页看看</button>
+  </view>
+  </block>
+</view>
