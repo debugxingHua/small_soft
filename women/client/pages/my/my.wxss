@@ -54,10 +54,18 @@
   width: 30%;
 }
 
-.address, .service, .favorite, .red_bage {
+.address, .favorite, .red_bage {
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #666;
+}
+.service {
+  position: fixed;
+  bottom: 10px;
+  right: 0;
+  float: right;
+  padding-right: 15px;
+  color: blue;
 }
 
 .lg {

@@ -15,8 +15,7 @@
     "pages/all_indent/all_indent",
     "pages/no_indent/no_indent",
     "pages/red_bage/red_bage",
-    "pages/favorite/favorite",
-    "pages/service/service"
+    "pages/favorite/favorite"
   ],
   "window":{
     "backgroundTextStyle":"light",

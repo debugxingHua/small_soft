@@ -13,6 +13,12 @@ Page({
       url: '../index/index',
     })
   },
+  toContent: function (event) {
+    var id = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../shop_content/shop_content?id=' + id
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

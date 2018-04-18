@@ -24,10 +24,6 @@
     <text>地址</text>
     <text class='lg'>></text>
   </view>
-  <view class='service' bindtap='to_service'>
-    <text>客服</text>
-    <text class='lg'>></text>
-  </view>
   <view class='favorite' bindtap='to_favorite'>
     <text>收藏夹</text>
     <text class='lg'>></text>
@@ -35,5 +31,9 @@
   <view class='red_bage' bindtap='to_red_bage'>
     <text>红包</text>
     <text class='lg'>></text>
+  </view>
+
+  <view class='service'>
+    <contact-button class='cBtn' type="default-dark" size="20" session-from="weapp">客服</contact-button>
   </view>
 </view>
