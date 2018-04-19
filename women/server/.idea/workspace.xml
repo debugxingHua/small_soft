@@ -11,7 +11,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -61,6 +61,10 @@
         <option value="$PROJECT_DIR$/address/addAddress.php" />
         <option value="$PROJECT_DIR$/address/getAddressListByUserId.php" />
         <option value="$PROJECT_DIR$/indent/addCartIndent.php" />
+        <option value="$PROJECT_DIR$/redBag/getRedBag.php" />
+        <option value="$PROJECT_DIR$/redBag/addRedBag.php" />
+        <option value="$PROJECT_DIR$/common/database.sql" />
+        <option value="$PROJECT_DIR$/redBag/deleteRedBag.php" />
       </list>
     </option>
   </component>
@@ -95,8 +99,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -111,6 +113,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -118,18 +122,19 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\兴化\small_soft\demo\server\redBag" />
+      <recent name="C:\Users\Administrator\Desktop\兴化\small_soft\demo\server" />
+      <recent name="C:\Users\Administrator\Desktop\兴化\small_soft\demo\server\favorite" />
+      <recent name="C:\Users\Administrator\Desktop\兴化\small_soft\demo\server\common" />
+      <recent name="C:\Users\Administrator\Desktop\兴化\small_soft\demo\server\indent" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\兴化\small_soft\demo\server\user" />
       <recent name="C:\Users\Administrator\Desktop\兴化\small_soft\demo\server\shopCart" />
       <recent name="C:\Users\Administrator\Desktop\兴化\small_soft\demo\server\common" />
       <recent name="C:\Users\Administrator\Desktop\兴化\small_soft\demo\server\swiper" />
       <recent name="C:\Users\Administrator\Desktop\兴化\small_soft\demo\server\commodity" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\兴化\small_soft\demo\server\favorite" />
-      <recent name="C:\Users\Administrator\Desktop\兴化\small_soft\demo\server\common" />
-      <recent name="C:\Users\Administrator\Desktop\兴化\small_soft\demo\server\indent" />
-      <recent name="C:\Users\Administrator\Desktop\兴化\small_soft\demo\server" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -240,14 +245,15 @@
       <workItem from="1523843057829" duration="4785000" />
       <workItem from="1523928206308" duration="490000" />
       <workItem from="1523928727432" duration="9831000" />
+      <workItem from="1524109607097" duration="3719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108470000" />
+    <option name="totallyTimeSpent" value="112189000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21041666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -281,37 +287,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/indent/getIndentByStatus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding>
-            <element signature="e#2631#3304#0#PHP" expanded="false" />
-            <element signature="e#3454#3508#0#PHP" expanded="false" />
-            <marker date="1523958226497" expanded="true" signature="510:583" ph="SELECT * FRO... sf_indent" />
-            <marker date="1523958226497" expanded="true" signature="510:609" ph="SELECT * FRO... sf_indent" />
-            <marker date="1523958226497" expanded="true" signature="646:697" ph="SELECT * FRO... sf_indent" />
-            <marker date="1523958226497" expanded="true" signature="646:723" ph="SELECT * FRO... sf_indent" />
-            <marker date="1523958226497" expanded="true" signature="1454:1567" ph="SELECT commo... sf_commodity" />
-            <marker date="1523958226497" expanded="true" signature="2708:2817" ph="SELECT commo... sf_commodity" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3132">
-          <caret line="116" column="21" lean-forward="false" selection-start-line="116" selection-start-column="21" selection-end-line="116" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shopCart/getShopCartSelect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/indent/getIndentByStatus.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -430,20 +405,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wxBizDataCrypt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="37" column="29" lean-forward="true" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/wxBizDataCrypt.php" />
+    <entry file="file://$PROJECT_DIR$/User.php" />
     <entry file="file://$PROJECT_DIR$/user/getUserInfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -453,14 +416,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/getUserInfo_save.php" />
     <entry file="file://$PROJECT_DIR$/saveUserByLoginCode.php" />
-    <entry file="file://$PROJECT_DIR$/new_PDO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/new_PDO.php" />
     <entry file="file://$PROJECT_DIR$/indent/addIndent.php" />
     <entry file="file://$PROJECT_DIR$/indent/getIndentsByStatus.php" />
     <entry file="file://$PROJECT_DIR$/common/new_PDO.php">
@@ -491,9 +447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-          <folding>
-            <marker date="1523958288993" expanded="true" signature="183:234" ph="SELECT * FRO... sf_address" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -501,9 +454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <marker date="1523957672762" expanded="true" signature="157:228" ph="SELECT * FRO... sf_commodity" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -511,9 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="1" column="37" lean-forward="false" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-          <folding>
-            <marker date="1523957672694" expanded="true" signature="161:236" ph="SELECT * FRO... sf_commodity_img" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -521,17 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="1" column="37" lean-forward="false" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-          <folding>
-            <marker date="1523957672784" expanded="true" signature="162:188" ph="SELECT * FRO... sf_commodity" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -539,13 +475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding>
-            <marker date="1523936358554" expanded="true" signature="251:304" ph="SELECT * FRO... sf_favorite" />
-            <marker date="1523936358554" expanded="true" signature="251:338" ph="SELECT * FRO... sf_favorite" />
-            <marker date="1523936358554" expanded="true" signature="806:859" ph="UPDATE sf_fa... " />
-            <marker date="1523936358554" expanded="true" signature="806:873" ph="UPDATE sf_fa... " />
-            <marker date="1523936358554" expanded="true" signature="806:874" ph="UPDATE sf_fa... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -553,10 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-          <folding>
-            <marker date="1523939644790" expanded="true" signature="177:235" ph="DELETE FROM " />
-            <marker date="1523939644790" expanded="true" signature="188:235" ph="UPDATE sf_fa... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -564,20 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <marker date="1523937308727" expanded="true" signature="179:350" ph="SELECT * FRO... sf_favorite" />
-            <marker date="1523937308727" expanded="true" signature="179:381" ph="SELECT sf_fa... sf_favorite" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indent/addCartIndent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-          <folding>
-            <marker date="1523958339542" expanded="true" signature="1606:1649" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -663,9 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <marker date="1523957859790" expanded="true" signature="162:189" ph="SELECT * FRO... sf_swiper_img" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -673,10 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding>
-            <marker date="1523957859877" expanded="true" signature="669:717" ph="SELECT * FRO... sf_user" />
-            <marker date="1523957859877" expanded="true" signature="1338:1395" ph="UPDATE sf_us... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -684,8 +588,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redBag/addRedBag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redBag/getRedBag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
           <folding>
-            <marker date="1523957872895" expanded="true" signature="636:684" ph="SELECT * FRO... sf_user" />
+            <marker date="1524110234666" expanded="true" signature="175:226" ph="SELECT * FRO... sf_red_bag" />
+            <marker date="1524110234666" expanded="true" signature="184:215" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="161" column="38" lean-forward="false" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redBag/deleteRedBag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <marker date="1524123471221" expanded="true" signature="177:222" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indent/addCartIndent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding>
+            <marker date="1523958339542" expanded="true" signature="1606:1649" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>

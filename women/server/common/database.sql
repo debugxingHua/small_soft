@@ -147,3 +147,16 @@ CREATE TABLE `sf_address` (
   `status` SMALLINT(10) NOT NULL DEFAULT 1,
   PRIMARY KEY (`address_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+--  创建红包
+--  用户id、姓名、邮编、电话、地址、默认地址、状态
+DROP TABLE IF EXISTS `sf_red_bag`;
+CREATE TABLE `sf_red_bag` (
+  `rb_id` mediumint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` SMALLINT (6) NOT NULL DEFAULT 0,
+  `rb_name` varchar(100) NOT NULL DEFAULT '',
+  `rb_money` INT(2) NOT NULL DEFAULT 0,
+  `status` SMALLINT(10) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`rb_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+INSERT INTO `sf_red_bag`(`rb_id`, `user_id`) VALUES (1,15)

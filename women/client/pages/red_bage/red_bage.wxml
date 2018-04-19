@@ -1,2 +1,18 @@
-<!--pages/red_bage/red_bage.wxml-->
-<text>pages/red_bage/red_bage.wxml</text>
+  <!-- <block wx:for="{{redBag}}" wx:key="" wx:for-item="item" wx:for-index="index">   -->
+<view class='container'>
+  <block wx:if="{{hasRedBag}}">
+      <view class='yes'>
+        <view class='name'>
+          <text>{{redBag.rb_name}}</text>          
+        </view>
+        <view class='money'>
+          <text>{{redBag.rb_money}} 元</text>        
+        </view>
+      </view>
+  </block>
+  <block wx:else>
+    <view class='no'>
+      <text>红包已用完</text>
+    </view>
+  </block>
+</view>

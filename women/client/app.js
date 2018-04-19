@@ -5,6 +5,7 @@ App({
     user_id:'',
     shop_name:'女人的衣服',
     pbl_datas : '',
+    redBag: '',
     commodity : '',
     shop_cart_count: 0,
     commodity_cart_buy:{}
@@ -69,7 +70,6 @@ App({
         count: count
       },
       success: function (res) {
-        console.log(res.data);
         if (res.data.num != 0) {
           wx.showToast({
             title: '成功',
@@ -173,46 +173,6 @@ App({
       }
     })
   },
-  onLaunch:function(){
-    var that = this;
-    // 调用login获取临时登录凭证
-    wx.login({
-      success: function (res) {    
-        if (res.code) {
-          //获取用户openId和session
-          wx.request({
-            url: url_list.url_list.saveUser,
-            method: 'POST', 
-            data: {
-              code: res.code
-            },
-            header: {
-              'content-type': 'application/x-www-form-urlencoded'
-            },
-            success: function (res) {
-              // console.log('???'+res.data.user_id);
-              //保存用户id
-              that.globalData.user_id = res.data.user_id;
-              if (res.data.errMsg == 'time_out'){
-                console.log('过期了');
-                try {
-                  wx.removeStorageSync('userInfo')
-                } catch (e) {
-                  console.log('error:'+e);
-                }
-              } else if (res.data.errMsg == 'time_again'){
-                console.log('有效');
-              }else{
-                console.log('new');
-              }
-            }
-          })
-        } else {
-          console.log('登录失败！' + res.errMsg)
-        }
-      }
-    })
-  },
   getAddressListByUserId: function (that) {
     //获取地址列表
     wx.request({
@@ -280,5 +240,57 @@ App({
         }
       }
     })
+  },
+  onLaunch: function () {
+    var that = this;
+    // 调用login获取临时登录凭证
+    wx.login({
+      success: function (res) {
+        if (res.code) {
+          //获取用户openId和session
+          wx.request({
+            url: url_list.url_list.saveUser,
+            method: 'POST',
+            data: {
+              code: res.code
+            },
+            header: {
+              'content-type': 'application/x-www-form-urlencoded'
+            },
+            success: function (res) {
+              // console.log('???'+res.data.user_id);
+              //保存用户id
+              that.globalData.user_id = res.data.user_id;
+              if (res.data.errMsg == 'time_out') {
+                console.log('过期了');
+                try {
+                  wx.removeStorageSync('userInfo')
+                } catch (e) {
+                  console.log('error:' + e);
+                }
+              } else if (res.data.errMsg == 'time_again') {
+                console.log('有效');
+              } else {
+                console.log('new');
+              }
+              //得到用户id后，查询该用户的红包
+              wx.request({
+                url: url_list.url_list.getRedBag,
+                data:{
+                  user_id: res.data.user_id
+                },
+                success:function(msg){
+                  //保存红包信息
+                  that.globalData.redBag = msg.data;
+                }
+              })
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    });
   }
+
 })

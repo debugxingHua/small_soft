@@ -36,6 +36,9 @@ var config = {
   addFavorite: `${host}/favorite/addFavorite.php`,
   getFavorite: `${host}/favorite/getFavorite.php`, 
   deleteFavorite: `${host}/favorite/deleteFavorite.php`,
+  //红包
+  getRedBag: `${host}/redBag/getRedBag.php`,
+  deleteRedBag: `${host}/redBag/deleteRedBag.php`,
 };
 
 module.exports = {

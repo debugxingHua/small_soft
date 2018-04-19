@@ -23,32 +23,74 @@
       </view>
     </view>
   </view>
-  <view class='jg'></view>
-  <view class='commodity' wx:for="{{sc_array_select}}" wx:for-item="item" wx:key="" wx:for-index="index">
-    <view class='shopname'>女人的衣服</view>
-    <view class='shop_content'>
-      <!-- 商品图 -->
-      <view class='img_container'>
-        <image  class='img' src='{{item.img_url}}'></image>
+  <view class='shopname'>女人的衣服</view>  
+  <scroll-view class='gd_view' scroll-top="10" scroll-y="true">
+    <view class='commodity' wx:for="{{sc_array_select}}" wx:for-item="item" wx:key="" wx:for-index="index">
+      <view class='shop_content'>
+        <!-- 商品图 -->
+        <view class='img_container'>
+          <image  class='img' src='{{item.img_url}}'></image>
+        </view>
+        <!-- 商品内容 -->
+        <view class='content_container'>
+          <!-- 标题 -->
+          <view class='td'>
+            <text class='title'>{{item.title}}</text>
+          </view>
+          <!-- 尺寸及颜色 -->
+          <view class='sc'>
+            <text class='sc_text'>尺寸：{{item.size}} 颜色：{{item.color}}</text>
+          </view>
+          <!-- 价格及数量 -->
+          <view class='mc'>
+            <view class='money'>
+              <text>￥{{item.money_now}}</text>
+            </view>
+            <view class='count'>
+                <text style='float:right;padding-right:15px;'> x {{item.count}}</text>
+            </view>
+          </view>
+        </view>
       </view>
-      <!-- 商品内容 -->
-      <view class='content_container'>
-        <!-- 标题 -->
-        <view class='td'>
-          <text class='title'>{{item.title}}</text>
+    </view>
+  </scroll-view>
+  <!-- 应付金额 -->
+  <view class='all_money'>
+    <view class='money_continer'>
+      <view class='money_text'>
+        <text>总计金额:</text>
+      </view>
+      <view class='money_yuan'>
+        <view style='float:right;'>
+          <text style='color:red' space='nbsp'> {{pay_money}}</text> 元 
         </view>
-        <!-- 尺寸及颜色 -->
-        <view class='sc'>
-          <text class='sc_text'>尺寸：{{item.size}} 颜色：{{item.color}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 运费 -->
+  <view class='all_money'>
+    <view class='money_continer'>
+      <view class='money_text'>
+        <text>运费:</text>
+      </view>
+      <view class='money_yuan'>
+        <view style='float:right;'>
+          <text space='nbsp'> + </text>        
+          <text style='color:red' space='nbsp'> {{yf}}</text> 元
         </view>
-        <!-- 价格及数量 -->
-        <view class='mc'>
-          <view class='money'>
-            <text>￥{{item.money_now}}</text>
-          </view>
-          <view class='count'>
-              <text style='float:right;padding-right:15px;'> X {{item.count}}</text>
-          </view>
+      </view>
+    </view>
+  </view>
+  <!-- 红包 -->
+  <view class='all_money'>
+    <view class='money_continer'>
+      <view class='money_text'>
+        <text>红包:</text>
+      </view>
+      <view class='money_yuan'>
+        <view style='float:right;'>
+          <text space='nbsp'> -  </text>
+          <text style='color:red' space='nbsp'> {{redBagMoney}}</text> 元 
         </view>
       </view>
     </view>
@@ -57,30 +99,13 @@
   <view class='all_money'>
     <view class='money_continer'>
       <view class='money_text'>
-        <text style='color:red;' space='ensp'>￥</text>
-        <text>支付金额</text>
+        <icon size='15' type='success'></icon>
+        <text>微信支付:</text>
       </view>
       <view class='money_yuan'>
         <view style='float:right;'>
-          运费:<text style='color:red'> {{yf}}</text>元
-          总计: <text style='color:red' space='nbsp'>{{pay_money}}</text>元 
+          <text style='color:red' space='nbsp'>{{money_all}}</text> 元
         </view>
-      </view>
-    </view>
-    <!-- 合计 -->    
-    <view style='float:right;'>
-      应付: <text style='color:red' space='nbsp'>{{money_all}}</text>元 
-    </view>
-  </view>
-  <!-- 支付方式 -->
-  <view class='pay'>
-    <view class='pay_continer'>
-      <view class='weixin'>
-        <icon size='15' type='success'></icon>
-        <text>微信支付</text>
-      </view>
-      <view class='pay_icon'>
-        <icon class='icon' size='15' type='success' color='red'></icon>
       </view>
     </view>
   </view>
@@ -89,7 +114,7 @@
     <view>
       <text>买家留言:</text>
     </view>
-    <view>
+    <view class='leaveWordInput'>
       <input type='text' bindinput='leaveWordInput' placeholder='建议填写与卖家商量好的信息哦'></input>
     </view>
   </view>

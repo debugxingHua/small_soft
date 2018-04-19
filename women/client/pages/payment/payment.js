@@ -9,6 +9,7 @@ Page({
   data: {
     address: '空',
     leaveWordInput: '无',
+    redBagMoney:0,
     yf: 0
   },
   addAddress: function (event) {
@@ -50,7 +51,7 @@ Page({
           'address_id': that.data.address.address_id,
           'types': that.data.types,
           'commodity': JSON.stringify(that.data.sc_array_select),
-          'red_bag': 0,
+          'red_bag': that.data.redBagMoney,
           'yf': that.data.yf,
           'money': that.data.money_all,
           'pay_money': that.data.pay_money,
@@ -63,12 +64,27 @@ Page({
         dataType: 'json',
         responseType: 'text',
         success: function (res) {
-          console.log(res.data);
+          //先删掉用完的红包，应该放到支付完成去
+          if (that.data.redBagMoney != 0){
+            wx.request({
+              url: url_list.url_list.deleteRedBag,
+              data: {
+                rb_id: that.data.redBag.rb_id
+              },
+              success:function(delete_res){
+                console.log(delete_res);
+                if(delete_res.data.errMsg == 'ok'){
+                  app.globalData.redBag = '';
+                  console.log('红包使用成功');
+                }
+              }
+            })
+          }
           wx.showToast({
             title: '订单生成成功'
           });
-          wx.switchTab({
-            url: '../index/index',
+          wx.redirectTo({
+            url: '../all_indent/all_indent',
           })
           //生成订单，去付款
           // wx.requestPayment({
@@ -99,7 +115,7 @@ Page({
     var money_all = Number(options.money_all);//总金额
     var yf = 0;//运费
     if (sc_array_select_count == 1){
-      yf = Number(app.globalData.sc_array_select[0].expressage); 
+      yf = Number(app.globalData.sc_array_select[0].expressage);
     }
     var pay_money = money_all - yf;
     that.setData({
@@ -109,5 +125,13 @@ Page({
       pay_money: pay_money,
       money_all: money_all
     });
+    if (app.globalData.redBag != '') {
+      money_all = money_all - Number(app.globalData.redBag.rb_money);
+      that.setData({
+        redBagMoney: app.globalData.redBag.rb_money,
+        redBag: app.globalData.redBag,        
+        money_all: money_all
+      });
+    }
   }
 })
