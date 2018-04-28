@@ -1,10 +1,6 @@
-Page {
-  background-color: #E8E8E8;
-}
+/* 导入lookImg的wxss */
+@import "../template/lookImg/template.wxss";
 
-.container {
-  background-color: #fff;
-}
 /* 标题 */
 .title{
   font-size: 18px;
@@ -18,7 +14,7 @@ Page {
 /* 销量及❤ */
 .sales{
   color: #333;
-  padding-bottom: 6px;  
+  padding-bottom: 6px;
   border-bottom: 1px solid #999;
 }
 /* ❤ */
@@ -41,7 +37,7 @@ Page {
 .expressage{
   color: #666;
   float: right;
-  padding-right: 5px; 
+  padding-right: 5px;
 }
 
 /* 内填充划线 */
@@ -112,7 +108,6 @@ Page {
   width: 30%;
 }
 
-
 /* parameter */
 .param_contanier {
   width: 100%;
@@ -171,7 +166,7 @@ Page {
   left: 175px;
 }
 .param_img_text2 {
-   position: relative;
+  position: relative;
   top: -87px; 
   left: 172px;
 }
@@ -189,29 +184,28 @@ Page {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
-.param-title {
+.param-title,.radio-group  {
   margin-left: 10px;
 }
-/* 单选框 */
-.param_radio {
-  margin-top: 5px;
-  flex-direction: row;
-}
-.radio-group {
-  margin-left: 3px;
-}
-.param_radio text{
+.radio_value {
+  position: relative;
   margin-left: 10px;
-  padding:2px 10px;
-  background-color: #E8E8E8;
-  color: #999;
+  float: left;
 }
-.radio_checked {
-  color: red;
-  border-bottom: 2px solid red; 
+.radio_container {
+  margin-top: 8px;
 }
-
+.radio_label {
+  padding: 4px 6px;
+}
+radio .wx-radio-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none; 
+  border-radius: 6rpx;
+  box-sizing: border-box;
+}
 
 /* 数量组 */
 .param_count {
@@ -233,7 +227,7 @@ Page {
 }
 .param_count_jia {
   width: 30%;
-  float: left; 
+  float: left;
 }
 .param_count_input {
   width: 40%;

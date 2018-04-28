@@ -1,8 +1,4 @@
 @import "../template/indent_commodity/template.wxss";
-.container {
-  margin-left: 10px;
-  margin-right: 10px;
-}
 .indent_container {
   width: 100%;
   border-top: 1px solid #999;

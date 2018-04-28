@@ -33,7 +33,6 @@ Page({
         });
       }
     });
-
   },
   tj : function(event){
     this.setData({
@@ -70,9 +69,11 @@ Page({
    */
   onShareAppMessage: function (res) {
     return {
-      title: '自定义，一般写小程序的名字',
-      path: '这里写你这个页面的路径',
-      imageUrl:'这个是显示的图片，不写就默认当前页面的截图',
+      //自定义，一般写小程序的名字
+      title: '大哥哥大姐们那，你们都是有钱的人。。。',
+      path: 'pages/index/index',
+      //这个是显示的图片，不写就默认当前页面的截图
+      imageUrl:'',
       success: function (shareTickets) {
         console.info(shareTickets + '成功');
         // 转发成功

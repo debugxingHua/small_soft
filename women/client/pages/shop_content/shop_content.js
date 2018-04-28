@@ -7,11 +7,21 @@ Page({
   data: {
     footer:true,
     count_value:1,
+    lookImg: false,
     suoyin:1
   },
-  // 设置样式
-  bindSelected:function(e){
-    console.log(e);
+  //看图片
+  lookImg:function(e){
+    var url = e.currentTarget.dataset.url;
+    this.setData({
+      lookImg:true,
+      look_img_url:url
+    });
+  },
+  hiddenImg:function(e){
+    this.setData({
+      lookImg: false
+    });
   },
   addFavorite:function(e){
     var commodity_id = e.currentTarget.dataset.id;
@@ -62,7 +72,6 @@ Page({
     });
   },
   CountChange: function (e) {
-    // console.log('Count', e.detail.value)
     this.setData({
       count_value: e.detail.value
     });
@@ -94,7 +103,6 @@ Page({
   },
   toAddCartOrBuy: function (event) {
     var that = this;
-    // console.log(that.data);
     that.setData({
       footer:false
     });

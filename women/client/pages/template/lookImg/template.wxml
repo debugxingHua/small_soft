@@ -1,0 +1,9 @@
+<template name="lookImg">
+  <view bindtap='hiddenImg'>
+    <view class='lookImg_container'></view>
+    <view class='img_container'>
+        <icon type='cancel' size='22' color='#fff'></icon>
+        <image src='{{look_img_url}}'></image>
+    </view>
+  </view>
+</template>
